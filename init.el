@@ -8,6 +8,16 @@
 (add-hook 'racer-mode-hook #'company-mode)
 (add-hook 'rust-mode-hook 'cargo-minor-mode)
 
+(package-install 'flycheck)
+(package-install 'flycheck-inline)
+(package-install 'autopair)
+
+(autopair-global-mode)
+(global-flycheck-mode)
+
+(with-eval-after-load 'flycheck
+  (add-hook 'flycheck-mode-hook #'flycheck-inline-mode))
+
 (require 'rust-mode)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
 (setq company-tooltip-align-annotations t)
