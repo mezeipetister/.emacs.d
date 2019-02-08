@@ -2,3 +2,41 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
+
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'racer-mode-hook #'company-mode)
+(add-hook 'rust-mode-hook #'cargo-minor-mode)
+(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+
+;(package-install 'autopair)
+
+;(with-eval-after-load 'rust-mode
+;  )
+
+(with-eval-after-load 'flycheck
+  (add-hook 'flycheck-mode-hook #'flycheck-inline-mode))
+
+(require 'rust-mode)
+(define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+(setq company-tooltip-align-annotations t)
+
+(autopair-global-mode)
+
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (use-package lsp-ui lsp-mode flymake-rust flycheck racer flycheck-rust flycheck-inline company-racer cargo autopair))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

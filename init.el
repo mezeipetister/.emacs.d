@@ -6,13 +6,9 @@
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
-(add-hook 'rust-mode-hook 'cargo-minor-mode)
+(add-hook 'rust-mode-hook #'cargo-minor-mode)
 
-(package-install 'flycheck)
-(package-install 'flycheck-inline)
 (package-install 'autopair)
-
-(autopair-global-mode)
 
 (with-eval-after-load 'rust-mode
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
@@ -23,3 +19,9 @@
 (require 'rust-mode)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
 (setq company-tooltip-align-annotations t)
+
+(autopair-global-mode)
+
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
