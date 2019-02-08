@@ -13,7 +13,9 @@
 (package-install 'autopair)
 
 (autopair-global-mode)
-(global-flycheck-mode)
+
+(with-eval-after-load 'rust-mode
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (with-eval-after-load 'flycheck
   (add-hook 'flycheck-mode-hook #'flycheck-inline-mode))
