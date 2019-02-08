@@ -3,6 +3,8 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+(load-theme 'wombat)
+
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
