@@ -4,6 +4,7 @@
 (package-initialize)
 
 (load-theme 'wombat)
+(xterm-mouse-mode 1) ;; Enable mouse in terminal
 
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
@@ -27,3 +28,17 @@
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
