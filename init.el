@@ -45,12 +45,14 @@
 
 ;; Custom key bindings and templates
 
-(global-set-key (kbd "<f2>") 'template-unit-test)
+(global-set-key (kbd "C-c t t") 'template-insert-rust-unit-test)
+(global-set-key (kbd "C-c t c") 'template-insert-copyright-general)
 
-(defun template-unit-test()
+(defun template-insert-rust-unit-test()
   "Insert Rust unit test template."
   (interactive)
-  (insert "#[cfg(test)]
+  (insert "// Unit tests
+#[cfg(test)]
 mod tests {
     #[test]
     fn demo_test() {
@@ -59,3 +61,10 @@ mod tests {
         assert_eq!(a + b, 3);
     }
 }"))
+
+(defun template-insert-copyright-general()
+  "Insert general copyright template."
+  (interactive)
+  (insert "// Copyright 2019 Peter Mezei
+// https://github.com/mezeipetister
+// For more details please check the readme and LICENSE files enclosed."))
