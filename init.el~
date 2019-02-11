@@ -3,16 +3,19 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+(load-theme 'wombat)
+(xterm-mouse-mode 1) ;; Enable mouse in terminal
+
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
 (add-hook 'rust-mode-hook #'cargo-minor-mode)
-(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 
-;(package-install 'autopair)
+(package-install 'autopair)
+(package-install 'comment-edit)
 
-;(with-eval-after-load 'rust-mode
-;  )
+(with-eval-after-load 'rust-mode
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (with-eval-after-load 'flycheck
   (add-hook 'flycheck-mode-hook #'flycheck-inline-mode))
@@ -33,7 +36,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (use-package lsp-ui lsp-mode flymake-rust flycheck racer flycheck-rust flycheck-inline company-racer cargo autopair))))
+    (comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

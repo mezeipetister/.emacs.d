@@ -35,10 +35,27 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair))))
+    (comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Custom key bindings and templates
+
+(global-set-key (kbd "<f2>") 'template-unit-test)
+
+(defun template-unit-test()
+  "Insert Rust unit test template."
+  (interactive)
+  (insert "#[cfg(test)]
+mod tests {
+    #[test]
+    fn demo_test() {
+        let a = 1;
+        let b = 2;
+        assert_eq!(a + b, 3);
+    }
+}"))
