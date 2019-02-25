@@ -13,6 +13,13 @@
 
 (package-install 'autopair)
 
+;; Loading mu4e config
+(load "~/.emacs.d/mu4e.el")
+;; Loading Org mode config
+(load "~/.emacs.d/org.el")
+;; Loading Calendar customs
+(load "~/.emacs.d/calendar.el")
+
 (with-eval-after-load 'rust-mode
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
