@@ -1,0 +1,42 @@
+[general]
+accounts = Gmail, Gardenova
+maxsyncaccounts = 10
+maxconnections = 10
+
+#
+# GARDENOVA SETTINGS
+#
+
+[Account Gardenova]
+localrepository = GardenovaLocal
+remoterepository = GardenovaRemote
+
+[Repository GardenovaLocal]
+type = Maildir
+localfolders = ~/Maildir/Gardenova
+
+[Repository GardenovaRemote]
+type = Gmail
+remoteuser = EMAIL
+remotepass = PASSWORD
+realdelete = no
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+#
+# GMAIL SETTINGS
+#
+
+[Account Gmail]
+localrepository = GmailLocal
+remoterepository = GmailRemote
+
+[Repository GmailLocal]
+type = Maildir
+localfolders = ~/Maildir/Gmail
+
+[Repository GmailRemote]
+type = Gmail
+remoteuser = EMAIL
+remotepass = PASSWORD
+realdelete = no
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt

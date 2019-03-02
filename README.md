@@ -10,8 +10,12 @@ Mu4e config el included here.
 
 Offline imap is a bit slow to download my emails.
 
+Offlineimap sample settings file included [here](./.offlineimaprc-sample)
+
 Todo
-- [ ] Find another way to download and sync my imap emails.
+- [ ] Find another way to download and sync my imap emails.  
+Here we have another suggestion what to use instead of offlineimap  
+https://www.reddit.com/r/emacs/comments/8q84dl/tip_how_to_easily_manage_your_emails_with_mu4e/
 
 # Org mode
 

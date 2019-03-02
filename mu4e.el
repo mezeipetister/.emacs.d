@@ -36,7 +36,7 @@
 
 (setq
  mu4e-view-show-images t
- mu4e-view-image-max-width 800)
+ mu4e-view-image-max-width 100)
 
 ;; something about ourselves
 (setq

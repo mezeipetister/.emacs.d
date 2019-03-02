@@ -12,7 +12,13 @@
 (add-hook 'rust-mode-hook #'cargo-minor-mode)
 
 (package-install 'autopair)
-(package-install 'comment-edit)
+
+;; Loading mu4e config
+(load "~/.emacs.d/mu4e3.el")
+;; Loading Org mode config
+(load "~/.emacs.d/org.el")
+;; Loading Calendar customs
+(load "~/.emacs.d/calendar.el")
 
 (with-eval-after-load 'rust-mode
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
@@ -36,10 +42,38 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair))))
+    (mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
+ '(send-mail-function (quote smtpmail-send-it))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Custom key bindings and templates
+
+(global-set-key (kbd "C-c t t") 'template-insert-rust-unit-test)
+(global-set-key (kbd "C-c t c") 'template-insert-copyright-general)
+
+(defun template-insert-rust-unit-test()
+  "Insert Rust unit test template."
+  (interactive)
+  (insert "// Unit tests
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn demo_test() {
+        let a = 1;
+        let b = 2;
+        assert_eq!(a + b, 3);
+    }
+}"))
+
+(defun template-insert-copyright-general()
+  "Insert general copyright template."
+  (interactive)
+  (insert "// Copyright 2019 Peter Mezei
+// https://github.com/mezeipetister
+// For more details please check the readme and LICENSE files enclosed."))

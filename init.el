@@ -20,6 +20,20 @@
 ;; Loading Calendar customs
 (load "~/.emacs.d/calendar.el")
 
+;; markdown mode
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+(setq markdown-command "/usr/bin/pandoc")
+;; -end
+
+;; Once this mode is enabled, the selected text is going to be rewritten
+(delete-selection-mode 1)
+
 (with-eval-after-load 'rust-mode
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
@@ -42,7 +56,8 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
+    (mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
+ '(send-mail-function (quote smtpmail-send-it))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
