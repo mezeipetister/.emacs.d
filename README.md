@@ -83,3 +83,12 @@ pandoc file.md -o file.rtf
 pandoc file.md -o file.odt
 ...
 ```
+
+# Markdown pandoc md to html what's about links?
+
+What happen when we use internal links to .md files, but we want to use them after  
+compile to html?
+
+This article contains the solution:
+
+[SOLUTION](https://stackoverflow.com/questions/40993488/convert-markdown-links-to-html-with-pandoc)
