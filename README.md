@@ -58,9 +58,19 @@ Voilá!
 |-------+------------------------------------------------|
 | - [ ] | Applying hunspell, or some other spell checker |
 | - [ ] | mu4e config, its annoying a bit right now      |
+| - [ ] | git server setup                               |
+| - [ ] | family domain name                             |
+| - [ ] | family mail server                             |
 
 # GIT merge conflict
 
 Once we have a conflict, then enter the file, take the cursor inside the required version, then  
 M-x smerge-keep-current => this will select the current selected version and remove the others.  
 Conflict solved.
+
+# GIT credential store
+
+```bash
+git config credential.helper store
+```
+
