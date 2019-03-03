@@ -2,7 +2,22 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("say_hello_program_file"
+(("Github password"
+ (filename . "~/Documents/github_password")
+ (front-context-string . "af6dbdb7dbe8f352")
+ (rear-context-string)
+ (position . 1))
+("Documents"
+ (filename . "~/Documents/")
+ (front-context-string . "bolti_forgalom_e")
+ (rear-context-string . " febr  27 15:10 ")
+ (position . 216))
+("Emacs folder"
+ (filename . "~/.emacs.d/")
+ (front-context-string . "auto-save-list\n ")
+ (rear-context-string . " márc   3 07:01 ")
+ (position . 219))
+("say_hello_program_file"
  (filename . "~/Documents/say_hello/src/main.rs")
  (front-context-string . "fn main() {\n    ")
  (rear-context-string)

@@ -54,6 +54,7 @@ Voilá!
 
 # TODO
 
-| Todo  | Description |
-|-------+-------------|
-| - [ ] | Applying    |
+| Todo  | Description                                    |
+|-------+------------------------------------------------|
+| - [ ] | Applying hunspell, or some other spell checker |
+| - [ ] | mu4e config, its annoying a bit right now      |
