@@ -28,6 +28,8 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
+
+;; this helps for pdf creation
 (setq markdown-command "/usr/bin/pandoc")
 ;; -end
 

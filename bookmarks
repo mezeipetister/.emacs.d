@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("say_hello_program_file"
+ (filename . "~/Documents/say_hello/src/main.rs")
+ (front-context-string . "fn main() {\n    ")
+ (rear-context-string)
+ (position . 1))
+("emacs readme"
+ (filename . "~/.emacs.d/README.md")
+ (front-context-string)
+ (rear-context-string . ".      |\n\nVoilá!")
+ (position . 1266))
+("w9.md"
+ (filename . "~/Documents/Diary/w9.md")
+ (front-context-string . "Nem éreztem bens")
+ (rear-context-string . "nt szemlélem.  \n")
+ (position . 8237))
+)

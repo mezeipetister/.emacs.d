@@ -24,3 +24,36 @@ I installed org-mode. Org.el included here with my current config.
 # Calendar
 
 I have a custom config to provide week numbers in calendar view. Config included in calendar.el.
+
+# Ruler
+
+If you need a ruler e.g. markdown editing, use ruler-mode.
+
+# Bookmarks
+
+To add a page to the bookmarks set C+X, r, m, I guess (m:mark)
+
+To list bookmarks: C+X, r, l
+
+Pretty usefull :)
+
+# Org mode table
+
+For table editing just enter org-mode, and starts to write a table  
+|header A|header B|header C| and C-c RET
+
+Then the magic
+
+| header A | header B | header C |
+|----------+----------+----------|
+| .        | ..       | ...      |
+| .        | ..       | ...      |
+| .        | ..       | ...      |
+
+Voilá!
+
+# TODO
+
+| Todo  | Description |
+|-------+-------------|
+| - [ ] | Applying    |
