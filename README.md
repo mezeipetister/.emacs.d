@@ -74,3 +74,12 @@ Conflict solved.
 git config credential.helper store
 ```
 
+# Export md to ..
+
+``` bash
+pandoc file.md -o file.epub
+pandoc file.md -o file.html
+pandoc file.md -o file.rtf
+pandoc file.md -o file.odt
+...
+```
