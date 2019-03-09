@@ -4,6 +4,8 @@
 (package-initialize)
 
 (load-theme 'wombat)
+;;(package-install 'atom-one-dark-theme)
+;;(load-theme 'atom-one-dark t)
 (xterm-mouse-mode 1) ;; Enable mouse in terminal
 
 (add-hook 'rust-mode-hook #'racer-mode)
@@ -63,7 +65,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (crux mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
+    (atom-one-dark-theme golden-ratio crux mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
  '(send-mail-function (quote smtpmail-send-it))
  '(tool-bar-mode nil))
 (custom-set-faces

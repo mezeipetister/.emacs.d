@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Github password"
+(("development.md"
+ (filename . "~/Documents/bermuda/development.md")
+ (front-context-string . "|               ")
+ (rear-context-string . "-------+------|\n")
+ (position . 905))
+("Ideas"
+ (filename . "~/Documents/Ideas/")
+ (front-context-string . "toc.epub\n  lrwxr")
+ (rear-context-string . " márc   3 09:18 ")
+ (position . 222))
+("Github password"
  (filename . "~/Documents/github_password")
  (front-context-string . "af6dbdb7dbe8f352")
  (rear-context-string)
@@ -25,11 +35,11 @@
 ("emacs readme"
  (filename . "~/.emacs.d/README.md")
  (front-context-string)
- (rear-context-string . ".      |\n\nVoilá!")
- (position . 1266))
+ (rear-context-string . "l-with-pandoc)\n\n")
+ (position . 2436))
 ("w9.md"
  (filename . "~/Documents/Diary/w9.md")
- (front-context-string . "Nem éreztem bens")
- (rear-context-string . "nt szemlélem.  \n")
- (position . 8237))
+ (front-context-string . "\n\n[^1]: Ez egy m")
+ (rear-context-string . "gyon szeretem.\n\n")
+ (position . 9453))
 )
