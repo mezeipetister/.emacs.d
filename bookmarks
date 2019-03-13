@@ -2,11 +2,21 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("development.md"
- (filename . "~/Documents/bermuda/development.md")
- (front-context-string . "|               ")
- (rear-context-string . "-------+------|\n")
- (position . 905))
+(("bermuda"
+ (filename . "~/Documents/bermuda/")
+ (front-context-string . "..\n  -rw-rw-r-- ")
+ (rear-context-string . " márc  10 19:59 ")
+ (position . 177))
+("Diary"
+ (filename . "~/Documents/Diary/")
+ (front-context-string . "..\n  -rw-r--r-- ")
+ (rear-context-string . " márc  10 19:59 ")
+ (position . 175))
+("WHY - TOC"
+ (filename . "~/Documents/Why/toc.md")
+ (front-context-string . "Ubuntu](./ubuntu")
+ (rear-context-string . "C WHY?\n\n## IT\n\n[")
+ (position . 21))
 ("Ideas"
  (filename . "~/Documents/Ideas/")
  (front-context-string . "toc.epub\n  lrwxr")
@@ -27,19 +37,9 @@
  (front-context-string . "auto-save-list\n ")
  (rear-context-string . " márc   3 07:01 ")
  (position . 219))
-("say_hello_program_file"
- (filename . "~/Documents/say_hello/src/main.rs")
- (front-context-string . "fn main() {\n    ")
- (rear-context-string)
- (position . 1))
 ("emacs readme"
  (filename . "~/.emacs.d/README.md")
  (front-context-string)
  (rear-context-string . "l-with-pandoc)\n\n")
  (position . 2436))
-("w9.md"
- (filename . "~/Documents/Diary/w9.md")
- (front-context-string . "\n\n[^1]: Ez egy m")
- (rear-context-string . "gyon szeretem.\n\n")
- (position . 9453))
 )
