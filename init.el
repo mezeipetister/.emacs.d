@@ -10,6 +10,35 @@
 ;;(load-theme 'atom-one-dark t)
 (xterm-mouse-mode 1) ;; Enable mouse in terminal
 
+;; WEB DEVELOPMENT
+;;
+;; Install packages:
+;; web-mode: highlighting, indentation, closing tags, jumping tags, commenting
+;; company-web: completion of keywords as you type
+;; yasnippet: shortcut to write a snippet
+;; emmet-mode: smarter yasnippet
+
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(setq web-mode-enable-current-column-highlight t)
+(setq web-mode-enable-current-element-highlight t)
+(defun my-web-mode-hook ()
+  (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files))
+  )
+(add-hook 'web-mode-hook  'emmet-mode)
+
+(setq vue-mode-packages
+  '(vue-mode))
+
+(setq vue-mode-excluded-packages '())
+
+(defun vue-mode/init-vue-mode ()
+  "Initialize my package"
+  (use-package vue-mode))
+
+;; RUST MODE
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
@@ -17,6 +46,7 @@
 
 (package-install 'autopair)
 (package-install 'crux)
+(package-install 'go-mode)
 
 ;; Loading mu4e config
 ;;(load "~/.emacs.d/mu4e.el")
@@ -67,7 +97,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (atom-one-dark-theme golden-ratio crux mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
+    (vue-mode emmet-mode yasnippet company-web web-mode moe-theme nimbus-theme one-themes go-mode atom-one-dark-theme golden-ratio crux mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
  '(send-mail-function (quote smtpmail-send-it))
  '(tool-bar-mode nil))
 (custom-set-faces
