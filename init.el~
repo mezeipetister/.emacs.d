@@ -3,14 +3,30 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;; (load-theme 'wombat)
-(load-theme 'nimbus t)
-;; (set-face-foreground 'font-lock-doc-face "purple")
-;; (set-face-foreground 'font-lock-comment-face "grey")
+(load-theme 'wombat)
+(set-face-foreground 'font-lock-doc-face "grey")
+(set-face-foreground 'font-lock-comment-face "grey")
 ;;(package-install 'atom-one-dark-theme)
 ;;(load-theme 'atom-one-dark t)
 (xterm-mouse-mode 1) ;; Enable mouse in terminal
 
+;; WEB DEVELOPMENT
+;;
+;; Install packages:
+;; web-mode: highlighting, indentation, closing tags, jumping tags, commenting
+;; company-web: completion of keywords as you type
+;; yasnippet: shortcut to write a snippet
+;; emmet-mode: smarter yasnippet
+
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(setq web-mode-enable-current-column-highlight t)
+(setq web-mode-enable-current-element-highlight t)
+(setq web-mode-enable-auto-pairing t)
+
+;; RUST MODE
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
@@ -27,6 +43,7 @@
 ;; Loading Calendar customs
 (load "~/.emacs.d/calendar.el")
 
+;; Open file/folder using the native os application!
 (use-package crux
   :bind (("C-c o" . crux-open-with)
          ("C-a" . crux-move-beginning-of-line)))
@@ -69,7 +86,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (moe-theme nimbus-theme one-themes go-mode atom-one-dark-theme golden-ratio crux mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
+    (vue-mode emmet-mode yasnippet company-web web-mode moe-theme nimbus-theme one-themes go-mode atom-one-dark-theme golden-ratio crux mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
  '(send-mail-function (quote smtpmail-send-it))
  '(tool-bar-mode nil))
 (custom-set-faces

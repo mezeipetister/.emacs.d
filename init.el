@@ -24,19 +24,7 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (setq web-mode-enable-current-column-highlight t)
 (setq web-mode-enable-current-element-highlight t)
-(defun my-web-mode-hook ()
-  (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files))
-  )
-(add-hook 'web-mode-hook  'emmet-mode)
-
-(setq vue-mode-packages
-  '(vue-mode))
-
-(setq vue-mode-excluded-packages '())
-
-(defun vue-mode/init-vue-mode ()
-  "Initialize my package"
-  (use-package vue-mode))
+(setq web-mode-enable-auto-pairing t)
 
 ;; RUST MODE
 (add-hook 'rust-mode-hook #'racer-mode)
@@ -55,6 +43,7 @@
 ;; Loading Calendar customs
 (load "~/.emacs.d/calendar.el")
 
+;; Open file/folder using the native os application!
 (use-package crux
   :bind (("C-c o" . crux-open-with)
          ("C-a" . crux-move-beginning-of-line)))
