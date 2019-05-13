@@ -37,7 +37,7 @@
 (package-install 'go-mode)
 
 ;; Loading mu4e config
-;;(load "~/.emacs.d/mu4e.el")
+(load "~/.emacs.d/mu4e4.el")
 ;; Loading Org mode config
 ;;(load "~/.emacs.d/org.el")
 ;; Loading Calendar customs
@@ -86,7 +86,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (vue-mode emmet-mode yasnippet company-web web-mode moe-theme nimbus-theme one-themes go-mode atom-one-dark-theme golden-ratio crux mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
+    (mu4e helm-mode helm helm-gtags setup-helm-gtags vue-mode emmet-mode yasnippet company-web web-mode moe-theme nimbus-theme one-themes go-mode atom-one-dark-theme golden-ratio crux mu4e-alert comment-edit edit-indirect rust-doctest-mode rust-edit-doctest use-package racer lsp-ui flymake-rust flycheck-rust flycheck-inline company-racer cargo autopair)))
  '(send-mail-function (quote smtpmail-send-it))
  '(tool-bar-mode nil))
 (custom-set-faces
