@@ -27,9 +27,11 @@
       smtpmail-stream-type 'starttls
       smtpmail-smtp-service 25
       mu4e-get-mail-command "offlineimap"
+      mu4e-update-interval 300 ;; Update in each 5 minutes
       mu4e-sent-messages-behavior 'delete
       mu4e-view-show-images t
       mu4e-view-image-max-width 100
+      mu4e-context-policy 'pick-first
       starttls-use-gnutls t)
 
 (setq mu4e-contexts
