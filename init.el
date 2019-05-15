@@ -36,6 +36,8 @@
 (package-install 'crux)
 (package-install 'go-mode)
 
+(setq-default fill-column 80)
+
 ;; Loading mu4e config
 (load "~/.emacs.d/mu4e4.el")
 ;; Loading Org mode config

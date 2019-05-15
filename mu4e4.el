@@ -3,6 +3,19 @@
 (require 'mu4e)
 (require 'smtpmail)
 
+;; Bookmarks
+(add-to-list 'mu4e-bookmarks
+  (make-mu4e-bookmark
+    :name  "Flagged messages"
+    :query "flag:flagged"
+    :key ?f))
+
+(add-to-list 'mu4e-bookmarks
+  (make-mu4e-bookmark
+    :name  "INBOX"
+    :query "maildir:\"/Gardenova/INBOX\" OR maildir:\"/Gmail/INBOX\""
+    :key ?i))
+
 (setq mu4e-sent-folder "/Gmail/[Gmail].Sent Mail"
       mu4e-drafts-folder "/Gmail/[Gmail].Drafts"
       mu4e-trash-folder  "/Gmail/[Gmail].Trash"
@@ -31,7 +44,13 @@
 		  (mu4e-drafts-folder	. "/Gmail/[Gmail].Drafts")
 		  (mu4e-sent-folder	. "/Gmail/[Gmail].Sent Mail")
 		  (mu4e-trash-folder	. "/Gmail/[Gmail].Trash")
-		  (mu4e-refile-folder	. "/Gmail/[Gmail].All Mail")))
+		  (mu4e-refile-folder	. "/Gmail/[Gmail].All Mail")
+		  (user-full-name	. "Peter Mezei")
+		  (mu4e-compose-signature . (concat
+					   "Peter Mezei\n"
+					   "+36304375490\n"
+					   ""))
+		  ))
 	,(make-mu4e-context
 	 :name "work"
 	 :enter-func (lambda () (mu4e-message "Entering Gardenova context"))
@@ -43,7 +62,14 @@
 		 (mu4e-drafts-folder	. "/Gardenova/[Gmail].Drafts")
 		 (mu4e-sent-folder	. "/Gardenova/[Gmail].Sent Mail")
 		 (mu4e-trash-folder	. "/Gardenova/[Gmail].Trash")
-		 (mu4e-refile-folder	. "/Gardenova/[Gmail].All Mail"))
+		 (mu4e-refile-folder	. "/Gardenova/[Gmail].All Mail")
+		 (user-full-name	. "Peter Mezei")
+		 (mu4e-compose-signature . (concat
+					  "Peter Mezei\n"
+					  "Gardenova\n"
+					  "+36304375490\n"
+					  ""))
+		 )
 	 )))
 
 ;; (defvar my-mu4e-account-alist
