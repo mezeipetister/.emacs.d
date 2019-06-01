@@ -4,17 +4,23 @@
 (require 'smtpmail)
 
 ;; Bookmarks
-(add-to-list 'mu4e-bookmarks
-  (make-mu4e-bookmark
-    :name  "Flagged messages"
-    :query "flag:flagged"
-    :key ?f))
+;; (add-to-list 'mu4e-bookmarks
+;;   (make-mu4e-bookmark
+;;     :name  "Flagged messages"
+;;     :query "flag:flagged"
+;;     :key ?f))
 
 (add-to-list 'mu4e-bookmarks
   (make-mu4e-bookmark
     :name  "INBOX"
     :query "maildir:\"/Gardenova/INBOX\" OR maildir:\"/Gmail/INBOX\""
     :key ?i))
+
+(add-to-list 'mu4e-bookmarks
+  (make-mu4e-bookmark
+    :name  "SENT"
+    :query "maildir:\"/Gardenova/[Gmail].Sent Mail\" OR maildir:\"/Gmail/[Gmail].Sent Mail\""
+    :key ?s))
 
 (setq mu4e-sent-folder "/Gmail/[Gmail].Sent Mail"
       mu4e-drafts-folder "/Gmail/[Gmail].Drafts"
