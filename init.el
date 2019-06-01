@@ -1,6 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
+	     '("melpa" . "https://melpa.org/packages/") t)
+
 (package-initialize)
 
 (load "~/.emacs.d/els/theme.el")
@@ -8,8 +9,8 @@
 (load "~/.emacs.d/els/global.el")
 (load "~/.emacs.d/els/markdown.el")
 (load "~/.emacs.d/els/rust.el")
-(load "~/.emacs.d/mu4e4.el")
-(load "~/.emacs.d/calendar.el")
+(load "~/.emacs.d/els/mu4e.el")
+(load "~/.emacs.d/els/calendar.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
