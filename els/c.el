@@ -1,28 +1,69 @@
-;; (package-install 'irony)
-;; (package-install 'company-irony)
+;; +--------------------------------------------------------------------------------------------------------------+
+;; | Based on this tutorial:                       								  |
+;; | https://wikemacs.org/wiki/C-ide              								  |
+;; |                                                                                                              |
+;; | This works great for struct auto copmletion:                                                                 |
+;; | https://stackoverflow.com/questions/17763214/set-up-autocomplete-mode-in-emacs-to-work-well-with-c-structs   |
+;; +--------------------------------------------------------------------------------------------------------------+
 
-;; (add-hook 'c-mode-hook 'company-mode)
-;; (eval-after-load 'company
-;;   '(add-to-list 'company-backends 'company-irony))
+;; Company mode
+(add-hook 'after-init-hook 'global-company-mode)
+;; CEDET/Semantic mode enable
+(semantic-mode 1)
 
-(add-hook 'after-init-hook #'global-company-mode)
+(require 'ggtags)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+              (ggtags-mode 1))))
 
-(add-hook 'c-mode-hook #'irony-mode)
+(define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
+(define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
+(define-key ggtags-mode-map (kbd "C-c g r") 'ggtags-find-reference)
+(define-key ggtags-mode-map (kbd "C-c g f") 'ggtags-find-file)
+(define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
+(define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
 
-(setq company-idle-delay 0.5)
-(setq company-minimum-prefix-length 2)
-(setq company-selection-wrap-around t)
-(setq company-show-numbers t)
-(setq company-tooltip-align-annotations t)
+(define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
 
-(defun my-irony-mode-hook ()
-  (define-key irony-mode-map [remap completion-at-point]
-    'irony-completion-at-point-async)
-  (define-key irony-mode-map [remap complete-symbol]
-    'irony-completion-at-point-async))
-(add-hook 'irony-mode-hook #'my-irony-mode-hook)
-(add-hook 'irony-mode-hook #'irony-cdb-autosetup-compile-options)
+(setq
+ helm-gtags-ignore-case t
+ helm-gtags-auto-update t
+ helm-gtags-use-input-at-cursor t
+ helm-gtags-pulse-at-cursor t
+ helm-gtags-prefix-key "\C-cg"
+ helm-gtags-suggested-key-mapping t
+ )
 
-(eval-after-load 'company
-  '(add-to-list
-    'company-backends '(company-irony-c-headers company-irony)))
+(require 'helm-gtags)
+;; Enable helm-gtags-mode
+(add-hook 'dired-mode-hook 'helm-gtags-mode)
+(add-hook 'eshell-mode-hook 'helm-gtags-mode)
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
+
+(define-key helm-gtags-mode-map (kbd "C-c g a") 'helm-gtags-tags-in-this-function)
+(define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-select)
+(define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+(define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+(define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
+(define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+
+;; auto completion with company
+(add-to-list 'company-backends 'company-c-headers)
+
+(setq-local imenu-create-index-function #'ggtags-build-imenu-index)
+
+;; |-------------------------------------------------------|
+;; | CEDET/Sematic custom includes for auto completion	   |
+;; +-o-----------------------------------------------------|
+
+;; GTK3
+(require 'semantic/bovine/c)
+
+;; +-------------------------------------------------------------|
+;; |Found help for this here:					 |
+;; |https://sourceforge.net/p/cedet/mailman/message/30025295/	 |
+;;-|-----------o-------------------------------------------------+
+(semantic-add-system-include "/usr/include/gtk-3.0/" 'c-mode)

@@ -1,0 +1,372 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [21 40])
+            ("stdio.h" include (:system-flag t) nil [41 59])
+            ("assert.h" include (:system-flag t) nil [60 79])
+            ("CustomerPtr" type
+               (:typedef ("Customer" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [92 129])
+            ("age" variable (:type "int") nil [162 170])
+            ("Customer" type
+               (:members 
+                  ( ("name" variable (:type "char") (reparse-symbol classsubparts) [219 229])
+                    ("age" variable (:type "int") (reparse-symbol classsubparts) [232 240]))                  
+                :type "struct")
+                nil [199 243])
+            ("demo_function" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [271 282])
+                    ("age" variable (:type "int") (reparse-symbol arg-sub-list) [283 291]))                  
+                :type ("CustomerPtr" type (:type "class") nil nil))
+                nil [245 332])
+            ("customer" variable
+               (:default-value "malloc(sizeof * customer)"
+                :type ("CustomerPtr" type (:type "class") nil nil))
+                nil [525 574])
+            ("customer" variable (:type "int") nil [667 676])
+            ("printf" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1038 1047])
+                    ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1048 1053])
+                    ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1054 1063])
+                    ("" variable (:type ("age" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1064 1068]))                  
+                :type "int")
+                nil [990 1069])
+            ("free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1185 1194]))                  
+                :type "int")
+                nil [1180 1195])
+            ("printf" function
+               (:prototype-flag t
+                :type "int")
+                nil [1259 1283])
+            ("b" variable (:type "int") nil [1335 1337])
+            ("b" variable (:type "int") nil [1379 1381])
+            ("Peti" variable
+               (:default-value "createCustomer(\"Peti\", 30)"
+                :type ("CustomerPtr" type (:type "class") nil nil))
+                nil [1400 1446])
+            ("print_customer_details" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1472 1477]))                  
+                :type "int")
+                nil [1449 1478])
+            ("destroy_customer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1498 1503]))                  
+                :type "int")
+                nil [1481 1504])
+            ("print_customer_details" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1530 1535]))                  
+                :type "int")
+                nil [1507 1536])
+            ("say_hello" function
+               (:prototype-flag t
+                :type "int")
+                nil [1539 1551])
+            ("say_hello" function
+               (:prototype-flag t
+                :type "int")
+                nil [1554 1566])
+            ("print_customer_details" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1593 1598]))                  
+                :type "int")
+                nil [1570 1599])
+            ("demo_a" variable
+               (:default-value "1"
+                :type "int")
+                nil [1605 1620])
+            ("demo_b" variable
+               (:default-value "2"
+                :type "int")
+                nil [1623 1638])
+            ("result" variable
+               (:default-value "demo(1, 2)"
+                :type "int")
+                nil [1642 1666])
+            ("printf" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("sum_two_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1743 1773]))                  
+                :type "int")
+                nil [1715 1775]))          
+      :file "basic.c"
+      :pointmax 1793
+      :fsize 1792
+      :lastmodtime '(23857 25031 916633 57000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [7 25])
+            ("stdlib.h" include (:system-flag t) nil [26 45])
+            ("sys/ioctl.h" include (:system-flag t) nil [46 68])
+            ("unistd.h" include (:system-flag t) nil [69 88])
+            ("CLEAR_SCREEN" variable (:constant-flag t) nil [98 110])
+            ("CLEAR_EOL" variable (:constant-flag t) nil [134 143])
+            ("MOVE_CURSOR" variable (:constant-flag t) nil [164 175])
+            ("Snake" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("avatar" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [211 224])
+                          ("x" variable (:type "int") (reparse-symbol classsubparts) [227 233])
+                          ("y" variable (:type "int") (reparse-symbol classsubparts) [236 242]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [192 251])
+            ("move_snake" function
+               (:arguments 
+                  ( ("snake" variable
+                       (:pointer 1
+                        :type ("Snake" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [269 282])
+                    ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [283 290]))                  
+                :type "void")
+                nil [253 494])
+            ("print_character" function
+               (:arguments 
+                  ( ("snake" variable
+                       (:pointer 1
+                        :type ("Snake" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [517 530]))                  
+                :type "void")
+                nil [496 695])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [706 711]))                  
+                :type "int")
+                nil [697 1522]))          
+      :file "snake.c"
+      :pointmax 1524
+      :fsize 1529
+      :lastmodtime '(23816 51185 117917 572000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CLEAR_EOL" . ((string "\"\\x1B[K\"" 147 . 155)))
+          ("CLEAR_SCREEN" . ((string "\"\\e[1;1H\\e[2J\"" 111 . 125)))
+          ("MOVE_CURSOR" . ((string "\"\\x1B[%d;%df\"" 177 . 190)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [18 36])
+            ("string.h" include (:system-flag t) nil [37 56])
+            ("main" function (:type "int") nil [58 362]))          
+      :file "char.c"
+      :pointmax 363
+      :fsize 370
+      :lastmodtime '(23775 36109 517995 757000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("gtk/gtk.h" include (:system-flag t) nil [1 21])
+            ("stdio.h" include (:system-flag t) nil [22 40])
+            ("set_window_title" function
+               (:arguments 
+                  ( ("window" variable
+                       (:pointer 1
+                        :type ("GtkWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69 87])
+                    ("window_title" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [88 107]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [42 204])
+            ("click_a" function
+               (:arguments 
+                  ( ("widget" variable
+                       (:pointer 1
+                        :type ("GtkWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [219 237])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [238 257]))                  
+                :type "void")
+                nil [206 319])
+            ("click_b" function
+               (:arguments 
+                  ( ("widget" variable
+                       (:pointer 1
+                        :type ("GtkWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [334 352])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [353 372]))                  
+                :type "void")
+                nil [321 434])
+            ("on_wtitle_a" function
+               (:arguments 
+                  ( ("accel_group" variable
+                       (:pointer 1
+                        :type ("GtkAccelGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [458 485])
+                    ("acceleratable" variable
+                       (:pointer 1
+                        :type ("GObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [504 527])
+                    ("keyvalue" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [546 561])
+                    ("modifier" variable (:type ("GdkModifierType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [580 605])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [624 643]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [436 847])
+            ("on_wtitle_b" function
+               (:arguments 
+                  ( ("accel_group" variable
+                       (:pointer 1
+                        :type ("GtkAccelGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [871 898])
+                    ("acceleratable" variable
+                       (:pointer 1
+                        :type ("GObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [917 940])
+                    ("keyvalue" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [959 974])
+                    ("modifier" variable (:type ("GdkModifierType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [993 1018])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1037 1056]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [849 1260])
+            ("on_wtitle_c" function
+               (:arguments 
+                  ( ("accel_group" variable
+                       (:pointer 1
+                        :type ("GtkAccelGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1284 1311])
+                    ("acceleratable" variable
+                       (:pointer 1
+                        :type ("GObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1330 1353])
+                    ("keyvalue" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1372 1387])
+                    ("modifier" variable (:type ("GdkModifierType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1406 1431])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1450 1469]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [1262 1673])
+            ("on_fullscreen" function
+               (:arguments 
+                  ( ("accel_group" variable
+                       (:pointer 1
+                        :type ("GtkAccelGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1699 1726])
+                    ("acceleratable" variable
+                       (:pointer 1
+                        :type ("GObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1745 1768])
+                    ("keyvalue" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1787 1802])
+                    ("modifier" variable (:type ("GdkModifierType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1821 1846])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1865 1884]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [1675 2100])
+            ("on_unfullscreen" function
+               (:arguments 
+                  ( ("accel_group" variable
+                       (:pointer 1
+                        :type ("GtkAccelGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2128 2155])
+                    ("acceleratable" variable
+                       (:pointer 1
+                        :type ("GObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2174 2197])
+                    ("keyvalue" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2216 2231])
+                    ("modifier" variable (:type ("GdkModifierType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2250 2275])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2294 2313]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [2102 2531])
+            ("flip_buttons" function
+               (:arguments 
+                  ( ("accel_group" variable
+                       (:pointer 1
+                        :type ("GtkAccelGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2555 2582])
+                    ("acceleratable" variable
+                       (:pointer 1
+                        :type ("GObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2601 2624])
+                    ("keyvalue" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2643 2658])
+                    ("modifier" variable (:type ("GdkModifierType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2677 2702])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2721 2740]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [2533 3126])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3138 3147])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3148 3160]))                  
+                :type "int")
+                nil [3128 6610]))          
+      :file "gtk_button.c"
+      :pointmax 6611
+      :fsize 6610
+      :lastmodtime '(23857 19113 220990 493000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [566 584])
+            ("stdlib.h" include (:system-flag t) nil [585 604])
+            ("gtk/gtk.h" include (:system-flag t) nil [605 625])
+            ("set_window_title" function
+               (:arguments 
+                  ( ("window" variable
+                       (:pointer 1
+                        :type ("GtkWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [762 780])
+                    ("window_title" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [781 800]))                  
+                :type "void")
+                nil [740 881])
+            ("demo_func" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [897 903])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [904 910]))                  
+                :type "int")
+                nil [883 958])
+            ("accelerator_pressed" function
+               (:arguments 
+                  ( ("name" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1098 1112]))                  
+                :type "void")
+                nil [1073 1267])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1313 1322])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1323 1335]))                  
+                :type "int")
+                nil [1304 2108]))          
+      :file "gtk_accel_group.c"
+      :pointmax 2109
+      :fsize 2116
+      :lastmodtime '(23857 25924 44620 178000)
+      :unmatched-syntax nil))
+  :file "!home!peti!Documents!c-examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
