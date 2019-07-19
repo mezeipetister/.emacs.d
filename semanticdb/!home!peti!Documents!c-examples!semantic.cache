@@ -24,99 +24,99 @@
                     ("age" variable (:type "int") (reparse-symbol classsubparts) [232 240]))                  
                 :type "struct")
                 nil [199 243])
-            ("demo_function" function
+            ("customer" variable
+               (:default-value "malloc(sizeof * customer)"
+                :type ("CustomerPtr" type (:type "class") nil nil))
+                nil [437 486])
+            ("customer" variable (:type "int") nil [579 588])
+            ("createCustomer" function
                (:arguments 
                   ( ("name" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [271 282])
-                    ("age" variable (:type "int") (reparse-symbol arg-sub-list) [283 291]))                  
+                        (reparse-symbol arg-sub-list) [412 423])
+                    ("age" variable (:type "int") (reparse-symbol arg-sub-list) [424 432]))                  
                 :type ("CustomerPtr" type (:type "class") nil nil))
-                nil [245 332])
-            ("customer" variable
-               (:default-value "malloc(sizeof * customer)"
-                :type ("CustomerPtr" type (:type "class") nil nil))
-                nil [525 574])
-            ("customer" variable (:type "int") nil [667 676])
+                nil [385 590])
             ("printf" function
                (:prototype-flag t
                 :arguments 
-                  ( ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1038 1047])
-                    ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1048 1053])
-                    ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1054 1063])
-                    ("" variable (:type ("age" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1064 1068]))                  
+                  ( ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [950 959])
+                    ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [960 965])
+                    ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [966 975])
+                    ("" variable (:type ("age" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [976 980]))                  
                 :type "int")
-                nil [990 1069])
+                nil [902 981])
             ("free" function
                (:prototype-flag t
                 :arguments 
-                  ( ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1185 1194]))                  
+                  ( ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1097 1106]))                  
                 :type "int")
-                nil [1180 1195])
+                nil [1092 1107])
             ("printf" function
                (:prototype-flag t
                 :type "int")
-                nil [1259 1283])
-            ("b" variable (:type "int") nil [1335 1337])
-            ("b" variable (:type "int") nil [1379 1381])
+                nil [1171 1195])
+            ("b" variable (:type "int") nil [1247 1249])
+            ("b" variable (:type "int") nil [1291 1293])
             ("Peti" variable
                (:default-value "createCustomer(\"Peti\", 30)"
                 :type ("CustomerPtr" type (:type "class") nil nil))
-                nil [1400 1446])
+                nil [1312 1358])
             ("print_customer_details" function
                (:prototype-flag t
                 :arguments 
-                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1472 1477]))                  
+                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1384 1389]))                  
                 :type "int")
-                nil [1449 1478])
+                nil [1361 1390])
             ("destroy_customer" function
                (:prototype-flag t
                 :arguments 
-                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1498 1503]))                  
+                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1410 1415]))                  
                 :type "int")
-                nil [1481 1504])
+                nil [1393 1416])
             ("print_customer_details" function
                (:prototype-flag t
                 :arguments 
-                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1530 1535]))                  
+                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1442 1447]))                  
                 :type "int")
-                nil [1507 1536])
+                nil [1419 1448])
             ("say_hello" function
                (:prototype-flag t
                 :type "int")
-                nil [1539 1551])
+                nil [1451 1463])
             ("say_hello" function
                (:prototype-flag t
                 :type "int")
-                nil [1554 1566])
+                nil [1466 1478])
             ("print_customer_details" function
                (:prototype-flag t
                 :arguments 
-                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1593 1598]))                  
+                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1505 1510]))                  
                 :type "int")
-                nil [1570 1599])
+                nil [1482 1511])
             ("demo_a" variable
                (:default-value "1"
                 :type "int")
-                nil [1605 1620])
+                nil [1517 1532])
             ("demo_b" variable
                (:default-value "2"
                 :type "int")
-                nil [1623 1638])
+                nil [1535 1550])
             ("result" variable
                (:default-value "demo(1, 2)"
                 :type "int")
-                nil [1642 1666])
+                nil [1554 1578])
             ("printf" function
                (:prototype-flag t
                 :arguments 
-                  ( ("" variable (:type ("sum_two_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1743 1773]))                  
+                  ( ("" variable (:type ("sum_two_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1609 1639]))                  
                 :type "int")
-                nil [1715 1775]))          
+                nil [1581 1641]))          
       :file "basic.c"
-      :pointmax 1793
-      :fsize 1792
-      :lastmodtime '(23857 25031 916633 57000)
+      :pointmax 1659
+      :fsize 1658
+      :lastmodtime '(23857 33099 869988 826000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -347,25 +347,25 @@
                   ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [897 903])
                     ("b" variable (:type "int") (reparse-symbol arg-sub-list) [904 910]))                  
                 :type "int")
-                nil [883 958])
+                nil [883 964])
             ("accelerator_pressed" function
                (:arguments 
-                  ( ("name" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1098 1112]))                  
+                  ( ("name" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1104 1118]))                  
                 :type "void")
-                nil [1073 1267])
+                nil [1079 1273])
             ("main" function
                (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1313 1322])
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1319 1328])
                     ("argv" variable
                        (:pointer 2
                         :type "char")
-                        (reparse-symbol arg-sub-list) [1323 1335]))                  
+                        (reparse-symbol arg-sub-list) [1329 1341]))                  
                 :type "int")
-                nil [1304 2108]))          
+                nil [1310 2114]))          
       :file "gtk_accel_group.c"
-      :pointmax 2109
-      :fsize 2116
-      :lastmodtime '(23857 25924 44620 178000)
+      :pointmax 2115
+      :fsize 2122
+      :lastmodtime '(23857 26094 320956 832000)
       :unmatched-syntax nil))
   :file "!home!peti!Documents!c-examples!semantic.cache"
   :semantic-tag-version "2.0"

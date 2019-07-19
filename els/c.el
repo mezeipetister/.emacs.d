@@ -6,10 +6,41 @@
 ;; | https://stackoverflow.com/questions/17763214/set-up-autocomplete-mode-in-emacs-to-work-well-with-c-structs   |
 ;; +--------------------------------------------------------------------------------------------------------------+
 
+;; Global flycheck mode
+(global-flycheck-mode)
+
+;; o----------------------------------|
+;; | TAB settings      	       	      |
+;; |----------------------------------|
+(defun my-tab ()
+  "Insert a tab char. (ASCII 9, \t)."
+  (interactive)
+  (insert "\t"))
+(global-set-key [C-tab] 'my-tab)
+
+(progn
+  ;; make indentation commands use space only (never tab character)
+  (setq-default indent-tabs-mode nil)
+  ;; emacs 23.1 to 26, default to t
+  ;; if indent-tabs-mode is t, it means it may use tab, resulting mixed space and tab
+  )
+;; set default tab char's display width to 4 spaces
+(setq-default tab-width 2) ; emacs 23.1 to 26 default to 8
+;; set current buffer's tab char's display width to 4 spaces
+(setq tab-width 2)
+
 ;; Company mode
 (add-hook 'after-init-hook 'global-company-mode)
 ;; CEDET/Semantic mode enable
 (semantic-mode 1)
+;; Irony mode
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 
 (require 'ggtags)
 (add-hook 'c-mode-common-hook
