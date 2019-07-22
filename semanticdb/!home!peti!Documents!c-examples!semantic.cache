@@ -24,99 +24,54 @@
                     ("age" variable (:type "int") (reparse-symbol classsubparts) [232 240]))                  
                 :type "struct")
                 nil [199 243])
-            ("customer" variable
-               (:default-value "malloc(sizeof * customer)"
-                :type ("CustomerPtr" type (:type "class") nil nil))
-                nil [437 486])
-            ("customer" variable (:type "int") nil [579 588])
+            ("demo_funct" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [328 334])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [360 366])
+                    ("c" variable (:type "int") (reparse-symbol arg-sub-list) [392 426]))                  
+                :type "int")
+                nil [301 454])
             ("createCustomer" function
                (:arguments 
                   ( ("name" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [412 423])
-                    ("age" variable (:type "int") (reparse-symbol arg-sub-list) [424 432]))                  
+                        (reparse-symbol arg-sub-list) [623 634])
+                    ("age" variable (:type "int") (reparse-symbol arg-sub-list) [635 643]))                  
                 :type ("CustomerPtr" type (:type "class") nil nil))
-                nil [385 590])
-            ("printf" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [950 959])
-                    ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [960 965])
-                    ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [966 975])
-                    ("" variable (:type ("age" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [976 980]))                  
-                :type "int")
-                nil [902 981])
-            ("free" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("customer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1097 1106]))                  
-                :type "int")
-                nil [1092 1107])
-            ("printf" function
-               (:prototype-flag t
-                :type "int")
-                nil [1171 1195])
-            ("b" variable (:type "int") nil [1247 1249])
-            ("b" variable (:type "int") nil [1291 1293])
-            ("Peti" variable
-               (:default-value "createCustomer(\"Peti\", 30)"
-                :type ("CustomerPtr" type (:type "class") nil nil))
-                nil [1312 1358])
+                nil [596 801])
             ("print_customer_details" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1384 1389]))                  
-                :type "int")
-                nil [1361 1390])
+               (:arguments 
+                  ( ("customer" variable (:type ("CustomerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1087 1108]))                  
+                :type "void")
+                nil [1059 1194])
             ("destroy_customer" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1410 1415]))                  
-                :type "int")
-                nil [1393 1416])
-            ("print_customer_details" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1442 1447]))                  
-                :type "int")
-                nil [1419 1448])
+               (:arguments 
+                  ( ("customer" variable (:type ("CustomerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1277 1298]))                  
+                :type "void")
+                nil [1255 1320])
             ("say_hello" function
-               (:prototype-flag t
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1372 1377]))                  
+                :type "void")
+                nil [1357 1408])
+            ("sum_two_number" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [1429 1435])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [1436 1442]))                  
                 :type "int")
-                nil [1451 1463])
-            ("say_hello" function
-               (:prototype-flag t
+                nil [1410 1462])
+            ("demo" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [1473 1479])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [1480 1486]))                  
                 :type "int")
-                nil [1466 1478])
-            ("print_customer_details" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("Peti" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1505 1510]))                  
-                :type "int")
-                nil [1482 1511])
-            ("demo_a" variable
-               (:default-value "1"
-                :type "int")
-                nil [1517 1532])
-            ("demo_b" variable
-               (:default-value "2"
-                :type "int")
-                nil [1535 1550])
-            ("result" variable
-               (:default-value "demo(1, 2)"
-                :type "int")
-                nil [1554 1578])
-            ("printf" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("sum_two_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1609 1639]))                  
-                :type "int")
-                nil [1581 1641]))          
+                nil [1464 1506])
+            ("main" function (:type "int") nil [1508 1869]))          
       :file "basic.c"
-      :pointmax 1659
-      :fsize 1658
-      :lastmodtime '(23857 33099 869988 826000)
+      :pointmax 1870
+      :fsize 1869
+      :lastmodtime '(23857 41792 387974 809000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -322,7 +277,7 @@
       :file "gtk_button.c"
       :pointmax 6611
       :fsize 6610
-      :lastmodtime '(23857 19113 220990 493000)
+      :lastmodtime '(23857 41432 183703 253000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -342,31 +297,167 @@
                         (reparse-symbol arg-sub-list) [781 800]))                  
                 :type "void")
                 nil [740 881])
-            ("demo_func" function
-               (:arguments 
-                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [897 903])
-                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [904 910]))                  
-                :type "int")
-                nil [883 964])
             ("accelerator_pressed" function
                (:arguments 
-                  ( ("name" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1104 1118]))                  
+                  ( ("name" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1021 1035]))                  
                 :type "void")
-                nil [1079 1273])
+                nil [996 1190])
             ("main" function
                (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1319 1328])
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1236 1245])
                     ("argv" variable
                        (:pointer 2
                         :type "char")
-                        (reparse-symbol arg-sub-list) [1329 1341]))                  
+                        (reparse-symbol arg-sub-list) [1246 1258]))                  
                 :type "int")
-                nil [1310 2114]))          
+                nil [1227 2031]))          
       :file "gtk_accel_group.c"
-      :pointmax 2115
-      :fsize 2122
-      :lastmodtime '(23857 26094 320956 832000)
-      :unmatched-syntax nil))
+      :pointmax 2032
+      :fsize 2039
+      :lastmodtime '(23857 37438 556659 901000)
+      :unmatched-syntax '((semantic-list 1211 . 1226) (symbol 1192 . 1211)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("gtk/gtk.h" include (:system-flag t) nil [1 21])
+            ("stdio.h" include (:system-flag t) nil [22 40])
+            ("flip_buttons" function
+               (:arguments 
+                  ( ("accel_group" variable
+                       (:pointer 1
+                        :type ("GtkAccelGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64 91])
+                    ("acceleratable" variable
+                       (:pointer 1
+                        :type ("GObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [110 133])
+                    ("keyvalue" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152 167])
+                    ("modifier" variable (:type ("GdkModifierType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [186 211])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [230 249]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [42 390])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [402 411])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [412 424]))                  
+                :type "int")
+                nil [392 1560]))          
+      :file "gtk_accel_error.c"
+      :pointmax 1561
+      :fsize 1560
+      :lastmodtime '(23819 44351 443648 423000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [32 50])
+            ("sumTwoNumbers" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [107 113])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [114 120]))                  
+                :type "int")
+                nil [86 121])
+            ("Object" type
+               (:typedef ("ObjectPtr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [143 176])
+            ("Object" type
+               (:members 
+                  ( ("a" variable (:type "int") (reparse-symbol classsubparts) [250 259])
+                    ("b" variable (:type "int") (reparse-symbol classsubparts) [250 259])
+                    ("sum" variable (:type ("sumTwoNumbers" type (:type "class") nil nil)) (reparse-symbol classsubparts) [262 280]))                  
+                :type "struct")
+                nil [232 283])
+            ("demo" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [311 317])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [318 324]))                  
+                :type "int")
+                nil [302 344])
+            ("main" function (:type "int") nil [346 477]))          
+      :file "function_in_struct.c"
+      :pointmax 479
+      :fsize 478
+      :lastmodtime '(23753 37682 0 0)
+      :unmatched-syntax '((TYPEDEF 78 . 85)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [90 109])
+            ("stdio.h" include (:system-flag t) nil [110 128])
+            ("string.h" include (:system-flag t) nil [129 148])
+            ("unistd.h" include (:system-flag t) nil [149 168])
+            ("CLEAR_SCREEN" variable (:constant-flag t) nil [178 190])
+            ("CLEAR_EOL" variable (:constant-flag t) nil [214 223])
+            ("MOVE_CURSOR" variable (:constant-flag t) nil [244 255])
+            ("MAX_ROW" variable (:constant-flag t) nil [280 287])
+            ("MAX_COLUMN" variable (:constant-flag t) nil [302 312])
+            ("Character" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("avatar" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [336 349])
+                          ("x" variable (:type "int") (reparse-symbol classsubparts) [352 358])
+                          ("y" variable (:type "int") (reparse-symbol classsubparts) [361 367]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [317 380])
+            ("get_random" function (:type "int") nil [403 457])
+            ("set_new_position" function
+               (:arguments 
+                  ( ("character" variable
+                       (:pointer 1
+                        :type ("Character" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [517 538]))                  
+                :type "void")
+                nil [495 851])
+            ("print_players" function
+               (:arguments 
+                  ( ("player_a" variable
+                       (:pointer 1
+                        :type ("Character" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [890 910])
+                    ("player_b" variable
+                       (:pointer 1
+                        :type ("Character" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [911 931]))                  
+                :type "void")
+                nil [871 1146])
+            ("print_position" function
+               (:arguments 
+                  ( ("position" variable (:type "int") (reparse-symbol arg-sub-list) [1193 1206])
+                    ("player" variable
+                       (:pointer 1
+                        :type ("Character" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1207 1225]))                  
+                :type "void")
+                nil [1173 1344])
+            ("main" function (:type "int") nil [1346 2787]))          
+      :file "game.c"
+      :pointmax 2788
+      :fsize 2796
+      :lastmodtime '(23815 47623 199006 892000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_ROW" . ((number "10" 291 . 293)))
+          ("CLEAR_EOL" . ((string "\"\\x1B[K\"" 227 . 235)))
+          ("CLEAR_SCREEN" . ((string "\"\\e[1;1H\\e[2J\"" 191 . 205)))
+          ("MAX_COLUMN" . ((number "10" 313 . 315)))
+          ("MOVE_CURSOR" . ((string "\"\\x1B[%d;%df\"" 257 . 270)))
+          )
+))
   :file "!home!peti!Documents!c-examples!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

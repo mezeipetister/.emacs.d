@@ -1,6 +1,6 @@
 ;; +--------------------------------------------------------------------------------------------------------------+
-;; | Based on this tutorial:                       								  |
-;; | https://wikemacs.org/wiki/C-ide              								  |
+;; | Based on this tutorial:                       								  																							|
+;; | https://wikemacs.org/wiki/C-ide              								  																							|
 ;; |                                                                                                              |
 ;; | This works great for struct auto copmletion:                                                                 |
 ;; | https://stackoverflow.com/questions/17763214/set-up-autocomplete-mode-in-emacs-to-work-well-with-c-structs   |
@@ -16,7 +16,7 @@
   "Insert a tab char. (ASCII 9, \t)."
   (interactive)
   (insert "\t"))
-(global-set-key [C-tab] 'my-tab)
+(global-set-key [C-return] 'my-tab)
 
 (progn
   ;; make indentation commands use space only (never tab character)
@@ -42,6 +42,18 @@
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 
+;; DEMO
+(require 'projectile)
+(defun setup-flycheck-gcc-includes ()
+  "Set gcc includes for flycheck using projectile."
+  (let ((root (ignore-errors (projectile-project-root))))
+    (when root
+      (setq-local flycheck-gcc-include-path
+        (mapcar (lambda (dir-x)
+          (concat root dir-x)) (projectile-current-project-dirs))))))
+(add-hook 'c-mode-hook 'setup-flycheck-gcc-includes)
+
+;; DEMO
 (require 'ggtags)
 (add-hook 'c-mode-common-hook
           (lambda ()

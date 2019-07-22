@@ -9,6 +9,15 @@
 (package-install 'autopair)
 (autopair-global-mode)
 
+;; Nyan "Cat" mode
+(use-package nyan-mode
+   :custom
+   (nyan-cat-face-number 4)
+   (nyan-animate-nyancat t)
+   :hook
+   (doom-modeline-mode . nyan-mode))
+;; Nyan mode end
+
 (setq-default fill-column 80)
 (setq company-tooltip-align-annotations t)
 
