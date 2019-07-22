@@ -17,7 +17,7 @@
                 :pointer 1
                 :type "typedef")
                 nil [92 129])
-            ("age" variable (:type "int") nil [162 170])
+            ("Age" variable (:type "int") nil [162 170])
             ("Customer" type
                (:members 
                   ( ("name" variable (:type "char") (reparse-symbol classsubparts) [219 229])
@@ -31,47 +31,42 @@
                     ("c" variable (:type "int") (reparse-symbol arg-sub-list) [392 426]))                  
                 :type "int")
                 nil [301 454])
+            ("demo" function (:type "void") nil [456 504])
             ("createCustomer" function
                (:arguments 
                   ( ("name" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [623 634])
-                    ("age" variable (:type "int") (reparse-symbol arg-sub-list) [635 643]))                  
+                        (reparse-symbol arg-sub-list) [673 684])
+                    ("age" variable (:type "int") (reparse-symbol arg-sub-list) [685 693]))                  
                 :type ("CustomerPtr" type (:type "class") nil nil))
-                nil [596 801])
+                nil [646 851])
             ("print_customer_details" function
                (:arguments 
-                  ( ("customer" variable (:type ("CustomerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1087 1108]))                  
+                  ( ("customer" variable (:type ("CustomerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1137 1158]))                  
                 :type "void")
-                nil [1059 1194])
+                nil [1109 1244])
             ("destroy_customer" function
                (:arguments 
-                  ( ("customer" variable (:type ("CustomerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1277 1298]))                  
+                  ( ("customer" variable (:type ("CustomerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1327 1348]))                  
                 :type "void")
-                nil [1255 1320])
+                nil [1305 1370])
             ("say_hello" function
                (:arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1372 1377]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1477 1482]))                  
                 :type "void")
-                nil [1357 1408])
+                nil [1462 1513])
             ("sum_two_number" function
                (:arguments 
-                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [1429 1435])
-                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [1436 1442]))                  
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [1693 1699])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [1700 1706]))                  
                 :type "int")
-                nil [1410 1462])
-            ("demo" function
-               (:arguments 
-                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [1473 1479])
-                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [1480 1486]))                  
-                :type "int")
-                nil [1464 1506])
-            ("main" function (:type "int") nil [1508 1869]))          
+                nil [1674 1726])
+            ("main" function (:type "int") nil [1728 2062]))          
       :file "basic.c"
-      :pointmax 1870
-      :fsize 1869
-      :lastmodtime '(23857 41792 387974 809000)
+      :pointmax 2063
+      :fsize 2062
+      :lastmodtime '(23861 27238 144749 98000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -456,6 +451,126 @@
           ("CLEAR_SCREEN" . ((string "\"\\e[1;1H\\e[2J\"" 191 . 205)))
           ("MAX_COLUMN" . ((number "10" 313 . 315)))
           ("MOVE_CURSOR" . ((string "\"\\x1B[%d;%df\"" 257 . 270)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("fcntl.h" include (:system-flag t) nil [702 720])
+            ("getopt.h" include (:system-flag t) nil [721 740])
+            ("signal.h" include (:system-flag t) nil [741 760])
+            ("stdio.h" include (:system-flag t) nil [761 779])
+            ("stdlib.h" include (:system-flag t) nil [780 799])
+            ("string.h" include (:system-flag t) nil [800 819])
+            ("unistd.h" include (:system-flag t) nil [820 839])
+            ("sys/ioctl.h" include (:system-flag t) nil [840 862])
+            ("sys/types.h" include (:system-flag t) nil [863 885])
+            ("linux/kd.h" include (:system-flag t) nil [886 907])
+            ("CLOCK_TICK_RATE" variable (:constant-flag t) nil [1880 1895])
+            ("VERSION_STRING" variable (:constant-flag t) nil [1920 1934])
+            ("copyright" variable
+               (:pointer 1
+                :default-value "\"Copyright (C) Johnathan Nightingale, 2002.  \"
+\"Use and Distribution subject to GPL.  \"
+\"For information: http://www.gnu.org/copyleft/.\""
+                :type "char")
+                nil [1948 2104])
+            ("DEFAULT_FREQ" variable (:constant-flag t) nil [2140 2152])
+            ("DEFAULT_LENGTH" variable (:constant-flag t) nil [2188 2202])
+            ("DEFAULT_REPS" variable (:constant-flag t) nil [2240 2252])
+            ("DEFAULT_DELAY" variable (:constant-flag t) nil [2269 2282])
+            ("DEFAULT_END_DELAY" variable (:constant-flag t) nil [2321 2338])
+            ("DEFAULT_STDIN_BEEP" variable (:constant-flag t) nil [2361 2379])
+            ("NO_END_DELAY" variable (:constant-flag t) nil [2425 2437])
+            ("YES_END_DELAY" variable (:constant-flag t) nil [2451 2464])
+            ("NO_STDIN_BEEP" variable (:constant-flag t) nil [2478 2491])
+            ("LINE_STDIN_BEEP" variable (:constant-flag t) nil [2504 2519])
+            ("CHAR_STDIN_BEEP" variable (:constant-flag t) nil [2530 2545])
+            ("beep_parms_t" type
+               (:members 
+                  ( ("freq" variable (:type "float") (reparse-symbol classsubparts) [2581 2592])
+                    ("length" variable (:type "int") (reparse-symbol classsubparts) [2630 2641])
+                    ("reps" variable (:type "int") (reparse-symbol classsubparts) [2679 2688])
+                    ("delay" variable (:type "int") (reparse-symbol classsubparts) [2728 2738])
+                    ("end_delay" variable (:type "int") (reparse-symbol classsubparts) [2777 2791])
+                    ("stdin_beep" variable (:type "int") (reparse-symbol classsubparts) [2829 2844])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("beep_parms_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3177 3203]))                  
+                :type "struct")
+                nil [2549 3252])
+            ("beep_parms_t" type
+               (:typedef ("beep_parms_t" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [2549 3252])
+            ("console_fd" variable
+               (:default-value "-1"
+                :type "int")
+                nil [3355 3375])
+            ("handle_signal" function
+               (:arguments 
+                  ( ("signum" variable (:type "int") (reparse-symbol arg-sub-list) [3493 3504]))                  
+                :type "void")
+                nil [3474 3772])
+            ("usage_bail" function
+               (:arguments 
+                  ( ("executable_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3817 3845]))                  
+                :type "void")
+                nil [3801 4159])
+            ("parse_command_line" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4918 4927])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4928 4940])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("beep_parms_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4941 4962]))                  
+                :type "void")
+                nil [4894 7223])
+            ("play_beep" function
+               (:arguments 
+                  ( ("parms" variable (:type ("beep_parms_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7242 7261]))                  
+                :type "void")
+                nil [7227 8282])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [8295 8304])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8305 8317]))                  
+                :type "int")
+                nil [8286 9989]))          
+      :file "beep.c"
+      :pointmax 9990
+      :fsize 9989
+      :lastmodtime '(23753 34707 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CLOCK_TICK_RATE" . ((number "1193180" 1896 . 1903)))
+          ("DEFAULT_STDIN_BEEP" . ((symbol "NO_STDIN_BEEP" 2380 . 2393)))
+          ("DEFAULT_FREQ" . ((number "440.0" 2159 . 2164)))
+          ("DEFAULT_DELAY" . ((number "100" 2288 . 2291)))
+          ("YES_END_DELAY" . ((number "1" 2467 . 2468)))
+          ("NO_STDIN_BEEP" . ((number "0" 2494 . 2495)))
+          ("CHAR_STDIN_BEEP" . ((number "2" 2546 . 2547)))
+          ("DEFAULT_END_DELAY" . ((symbol "NO_END_DELAY" 2340 . 2352)))
+          ("NO_END_DELAY" . ((number "0" 2441 . 2442)))
+          ("VERSION_STRING" . ((string "\"beep-1.2.2\"" 1935 . 1947)))
+          ("DEFAULT_REPS" . ((number "1" 2259 . 2260)))
+          ("LINE_STDIN_BEEP" . ((number "1" 2520 . 2521)))
+          ("DEFAULT_LENGTH" . ((number "200" 2207 . 2210)))
           )
 ))
   :file "!home!peti!Documents!c-examples!semantic.cache"

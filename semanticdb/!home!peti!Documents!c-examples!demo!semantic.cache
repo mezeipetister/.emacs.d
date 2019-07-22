@@ -1,0 +1,80 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [90 109])
+            ("stdio.h" include (:system-flag t) nil [110 128])
+            ("string.h" include (:system-flag t) nil [129 148])
+            ("unistd.h" include (:system-flag t) nil [149 168])
+            ("CLEAR_SCREEN" variable (:constant-flag t) nil [180 192])
+            ("CLEAR_SCREEN" variable (:constant-flag t) nil [180 192])
+            ("CLEAR_EOL" variable (:constant-flag t) nil [216 225])
+            ("MOVE_CURSOR" variable (:constant-flag t) nil [246 257])
+            ("MAX_ROW" variable (:constant-flag t) nil [282 289])
+            ("MAX_COLUMN" variable (:constant-flag t) nil [304 314])
+            ("MAX_COLUMN" variable (:constant-flag t) nil [304 314])
+            ("Character" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("avatar" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [338 351])
+                          ("x" variable (:type "int") (reparse-symbol classsubparts) [354 360])
+                          ("y" variable (:type "int") (reparse-symbol classsubparts) [363 369]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [319 382])
+            ("get_random" function (:type "int") nil [405 459])
+            ("set_new_position" function
+               (:arguments 
+                  ( ("character" variable
+                       (:pointer 1
+                        :type ("Character" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [519 540]))                  
+                :type "void")
+                nil [497 853])
+            ("print_players" function
+               (:arguments 
+                  ( ("player_a" variable
+                       (:pointer 1
+                        :type ("Character" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [892 912])
+                    ("player_b" variable
+                       (:pointer 1
+                        :type ("Character" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [913 933]))                  
+                :type "void")
+                nil [873 1148])
+            ("print_position" function
+               (:arguments 
+                  ( ("position" variable (:type "int") (reparse-symbol arg-sub-list) [1195 1208])
+                    ("player" variable
+                       (:pointer 1
+                        :type ("Character" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1209 1227]))                  
+                :type "void")
+                nil [1175 1346])
+            ("main" function (:type "int") nil [1348 2792]))          
+      :file "game.c"
+      :pointmax 2793
+      :fsize 2801
+      :lastmodtime '(23861 41793 371318 907000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_ROW" . ((number "10" 291 . 293)))
+          ("CLEAR_EOL" . ((string "\"\\x1B[K\"" 227 . 235)))
+          ("CLEAR_SCREEN" . ((string "\"\\e[1;1H\\e[2J\"" 193 . 207)))
+          ("MAX_COLUMN" . ((number "11" 313 . 315)))
+          ("MOVE_CURSOR" . ((string "\"\\x1B[%d;%df\"" 257 . 270)))
+          )
+)
+)
+  :file "!home!peti!Documents!c-examples!demo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

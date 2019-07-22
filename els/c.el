@@ -43,6 +43,7 @@
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 
 ;; DEMO
+(package-install 'projectile)
 (require 'projectile)
 (defun setup-flycheck-gcc-includes ()
   "Set gcc includes for flycheck using projectile."
@@ -54,6 +55,7 @@
 (add-hook 'c-mode-hook 'setup-flycheck-gcc-includes)
 
 ;; DEMO
+(package-install 'ggtags)
 (require 'ggtags)
 (add-hook 'c-mode-common-hook
           (lambda ()

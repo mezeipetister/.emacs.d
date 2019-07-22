@@ -6,14 +6,19 @@
 ;; Once this mode is enabled, the selected text is going to be rewritten
 (delete-selection-mode 1)
 
+;; Autopair mode
 (package-install 'autopair)
 (autopair-global-mode)
+;; End
 
 ;; Nyan "Cat" mode
+(package-install 'nyan-mode)
+(nyan-mode 1)
 (use-package nyan-mode
    :custom
    (nyan-cat-face-number 4)
    (nyan-animate-nyancat t)
+   (nyan-bar-length 20)
    :hook
    (doom-modeline-mode . nyan-mode))
 ;; Nyan mode end
