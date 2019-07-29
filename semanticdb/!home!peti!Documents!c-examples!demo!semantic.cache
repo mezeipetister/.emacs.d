@@ -17,6 +17,7 @@
             ("MAX_ROW" variable (:constant-flag t) nil [282 289])
             ("MAX_COLUMN" variable (:constant-flag t) nil [304 314])
             ("MAX_COLUMN" variable (:constant-flag t) nil [304 314])
+            ("MAX_COLUMN" variable (:constant-flag t) nil [304 314])
             ("Character" type
                (:typedef ("" type
                      (:members 
@@ -64,13 +65,13 @@
       :file "game.c"
       :pointmax 2793
       :fsize 2801
-      :lastmodtime '(23861 41793 371318 907000)
+      :lastmodtime '(23861 43601 228722 336000)
       :unmatched-syntax nil
       :lexical-table 
         '(("MAX_ROW" . ((number "10" 291 . 293)))
           ("CLEAR_EOL" . ((string "\"\\x1B[K\"" 227 . 235)))
           ("CLEAR_SCREEN" . ((string "\"\\e[1;1H\\e[2J\"" 193 . 207)))
-          ("MAX_COLUMN" . ((number "11" 313 . 315)))
+          ("MAX_COLUMN" . ((number "10" 315 . 317)))
           ("MOVE_CURSOR" . ((string "\"\\x1B[%d;%df\"" 257 . 270)))
           )
 )

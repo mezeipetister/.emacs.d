@@ -6087,6 +6087,663 @@
         '(("_STRINGS_H" . ((number "1" 828 . 829)))
           ("__need_size_t")
           )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("_MATH_H" variable (:constant-flag t) nil [905 912])
+            ("__GLIBC_INTERNAL_STARTING_HEADER_IMPLEMENTATION" variable (:constant-flag t) nil [924 971])
+            ("bits/libc-header-start.h" include (:system-flag t) nil [972 1007])
+            ("isunordered" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [43105 43116])
+            ("islessgreater" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [42873 42886])
+            ("islessequal" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [42720 42731])
+            ("isless" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [42573 42579])
+            ("isgreaterequal" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [42417 42431])
+            ("isgreater" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [42267 42276])
+            ("M_SQRT1_2l" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34507 34517])
+            ("M_SQRT2l" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34435 34443])
+            ("M_2_SQRTPIl" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34357 34368])
+            ("M_2_PIl" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34289 34296])
+            ("M_1_PIl" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34221 34228])
+            ("M_PI_4l" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34153 34160])
+            ("M_PI_2l" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34085 34092])
+            ("M_PIl" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34020 34025])
+            ("M_LN10l" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33948 33955])
+            ("M_LN2l" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33877 33883])
+            ("M_LOG10El" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33803 33812])
+            ("M_LOG2El" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33731 33739])
+            ("M_El" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33668 33672])
+            ("M_SQRT1_2" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33361 33370])
+            ("M_SQRT2" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33307 33314])
+            ("M_2_SQRTPI" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33247 33257])
+            ("M_2_PI" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33196 33202])
+            ("M_1_PI" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33145 33151])
+            ("M_PI_4" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33094 33100])
+            ("M_PI_2" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [33043 33049])
+            ("M_PI" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [32996 33000])
+            ("M_LN10" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [32941 32947])
+            ("M_LN2" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [32888 32893])
+            ("M_LOG10E" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [32832 32840])
+            ("M_LOG2E" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [32779 32786])
+            ("M_E" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [32735 32738])
+            ("MAXFLOAT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [32616 32624])
+            ("math_errhandling" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [30190 30206])
+            ("MATH_ERREXCEPT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [29614 29628])
+            ("MATH_ERRNO" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [29556 29566])
+            ("isinf" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [29451 29456])
+            ("isnan" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [28609 28614])
+            ("isnormal" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [28312 28320])
+            ("isfinite" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [28069 28077])
+            ("signbit" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [27847 27854])
+            ("signbit" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [27708 27715])
+            ("fpclassify" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [27031 27041])
+            ("" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("FP_NAN" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [25849 25857])
+                    ("FP_INFINITE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [25894 25907])
+                    ("FP_ZERO" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [25954 25963])
+                    ("FP_SUBNORMAL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [26002 26016])
+                    ("FP_NORMAL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [26065 26076]))                  )
+                (reparse-symbol extern-c-contents) [25836 26118])
+            ("__MATH_TG" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [25479 25488])
+            ("signgam" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [22944 22963])
+            ("__MATHCALL_NARROW" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [15944 15961])
+            ("__MATHCALL_NARROW_REDIR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [15803 15826])
+            ("__MATHCALL_NARROW_NORMAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [15691 15715])
+            ("__MATHCALL_NARROW_ARGS_3" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [15621 15645])
+            ("__MATHCALL_NARROW_ARGS_2" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [15563 15587])
+            ("__MATHCALL_NARROW_ARGS_1" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [15517 15541])
+            ("bits/mathcalls.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [11204 11233])
+            ("bits/mathcalls-helper-functions.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [11157 11203])
+            ("__MATH_DECLARE_LDOUBLE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11130 11152])
+            ("__MATH_DECLARING_FLOATN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11093 11116])
+            ("__MATH_DECLARING_DOUBLE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11056 11079])
+            ("__MATH_PRECNAME" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11011 11026])
+            ("_Mdouble_" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10978 10987])
+            ("bits/mathcalls.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [9674 9702])
+            ("bits/mathcalls-helper-functions.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [9628 9673])
+            ("__MATH_DECLARING_FLOATN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9601 9624])
+            ("__MATH_DECLARING_DOUBLE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9565 9588])
+            ("__MATH_PRECNAME" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9521 9536])
+            ("_Mdouble_" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9495 9504])
+            ("bits/mathcalls.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [9199 9226])
+            ("bits/mathcalls-helper-functions.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [9154 9198])
+            ("__MATH_DECLARING_FLOATN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9127 9150])
+            ("__MATH_DECLARING_DOUBLE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9092 9115])
+            ("__MATH_PRECNAME" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9043 9058])
+            ("_Mdouble_" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9017 9026])
+            ("__MATHDECL_1" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8904 8916])
+            ("__MATHDECLX" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8695 8706])
+            ("__MATHCALLX" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8586 8597])
+            ("__MATHDECL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8432 8442])
+            ("__MATHCALL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8341 8351])
+            ("__MATHDECL_VEC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8191 8205])
+            ("__MATHCALL_VEC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8049 8063])
+            ("__SIMD_DECL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7984 7995])
+            ("bits/fp-fast.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [7171 7196])
+            ("FP_ILOGBNAN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6324 6335])
+            ("FP_ILOGB0" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6210 6219])
+            ("bits/fp-logb.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [6086 6111])
+            ("double_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("double"))
+                (reparse-symbol extern-c-contents) [4901 4925])
+            ("float_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("float"))
+                (reparse-symbol extern-c-contents) [4878 4900])
+            ("bits/flt-eval-method.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [4517 4550])
+            ("NAN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3442 3445])
+            ("INFINITY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3147 3155])
+            ("HUGE_VALL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2180 2189])
+            ("HUGE_VALF" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2151 2160])
+            ("HUGE_VAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1974 1982])
+            ("bits/floatn.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1414 1438])
+            ("bits/math-vector.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1337 1366])
+            ("bits/types.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1247 1270]))          
+      :file "math.h"
+      :pointmax 53080
+      :fsize 53079
+      :lastmodtime '(23722 22952 0 0)
+      :unmatched-syntax '((number "4" 26104 . 26113) (spp-macro-def 26086 . 26095) (punctuation 26075 . 26076) (number "3" 26047 . 26059) (spp-macro-def 26026 . 26038) (punctuation 26015 . 26016) (number "2" 25989 . 25996) (spp-macro-def 25973 . 25980) (punctuation 25962 . 25963) (number "1" 25937 . 25948) (spp-macro-def 25917 . 25928) (punctuation 25906 . 25907) (number "0" 25882 . 25888) (spp-macro-def 25867 . 25873) (punctuation 25856 . 25857) (symbol 9915 . 9925) (symbol 9907 . 9914) (punctuation 9905 . 9906) (punctuation 9904 . 9905) (symbol 9883 . 9896) (symbol 9875 . 9882) (punctuation 9873 . 9874) (punctuation 9872 . 9873) (string 5672 . 5705) (symbol 5666 . 5671) (punctuation 5663 . 5664))
+      :lexical-table 
+        '(("NAN" . ((semantic-list "(0.0f / 0.0f)" 3446 . 3459)))
+          ("isinf" (spp-arg-list ("x") 29456 . 29459) . ((symbol "__MATH_TG" 29460 . 29469) (semantic-list "((x), __isinf, (x))" 29470 . 29489)))
+          ("math_errhandling" . ((semantic-list "(MATH_ERRNO | MATH_ERREXCEPT)" 30207 . 30236)))
+          ("M_2_SQRTPIl" . ((number "1." 34369 . 34371) (number "128379167095512573896158903121545172L" 34371 . 34408)))
+          ("isnan" (spp-arg-list ("x") 28614 . 28617) . ((symbol "__MATH_TG" 28618 . 28627) (semantic-list "((x), __isnan, (x))" 28628 . 28647)))
+          ("M_LN10" . ((number "2.30258509299404568402" 32949 . 32971)))
+          ("M_SQRT2" . ((number "1.41421356237309504880" 33315 . 33337)))
+          ("M_2_PIl" . ((number "0." 34297 . 34299) (number "636619772367581343075535053490057448L" 34299 . 34336)))
+          ("FP_SUBNORMAL" . ((number "3" 26039 . 26040)))
+          ("HUGE_VALF" . ((number "1e10000f" 2161 . 2169)))
+          ("__MATH_TG" (spp-arg-list ("TG_ARG" "FUNC" "ARGS") 25488 . 25508) . ((semantic-list "(sizeof (TG_ARG) == sizeof (float)		\\
+   ? FUNC ## f ARGS				\\
+   : sizeof (TG_ARG) == sizeof (double)		\\
+   ? FUNC ARGS					\\
+   : FUNC ## l ARGS)" 25514 . 25661)))
+          ("__MATHCALLX" (spp-arg-list ("function" "suffix" "args" "attrib") 8597 . 8628) . ((symbol "__MATHDECLX" 8633 . 8644) (semantic-list "(_Mdouble_,function,suffix, args, attrib)" 8645 . 8686)))
+          ("M_2_SQRTPI" . ((number "1.12837916709551257390" 33258 . 33280)))
+          ("M_LOG2El" . ((number "1." 33740 . 33742) (number "442695040888963407359924681001892137L" 33742 . 33779)))
+          ("isgreater" (spp-arg-list ("x" "y") 42276 . 42282) . ((semantic-list "(__extension__ ({ __typeof__ (x) __x = (x); __typeof__ (y) __y = (y); \\
+		    !isunordered (__x, __y) && __x > __y; }))" 42287 . 42406)))
+          ("FP_NAN" . ((number "0" 25874 . 25875)))
+          ("M_LOG2E" . ((number "1.4426950408889634074" 32787 . 32808)))
+          ("islessequal" (spp-arg-list ("x" "y") 42731 . 42737) . ((semantic-list "(__extension__ ({ __typeof__ (x) __x = (x); __typeof__ (y) __y = (y); \\
+		    !isunordered (__x, __y) && __x <= __y; }))" 42742 . 42862)))
+          ("_MATH_H" . ((number "1" 913 . 914)))
+          ("__GLIBC_INTERNAL_STARTING_HEADER_IMPLEMENTATION")
+          ("__MATHCALL_VEC" (spp-arg-list ("function" "suffix" "args") 8063 . 8087) . 
+              ((symbol "__SIMD_DECL" 8093 . 8104) (semantic-list "(__MATH_PRECNAME (function, suffix))" 8105 . 8141) (symbol "__MATHCALL" 8146 . 8156) (semantic-list "(function, suffix, args)" 8157 . 8181)))
+          ("M_LOG10El" . ((number "0." 33813 . 33815) (number "434294481903251827651128918916605082L" 33815 . 33852)))
+          ("M_PI_2l" . ((number "1." 34093 . 34095) (number "570796326794896619231321691639751442L" 34095 . 34132)))
+          ("FP_ZERO" . ((number "2" 25981 . 25982)))
+          ("FP_ILOGB0" . ((semantic-list "(-2147483647)" 6220 . 6233)))
+          ("FP_INFINITE" . ((number "1" 25929 . 25930)))
+          ("__MATHDECLX" (spp-arg-list ("type" "function" "suffix" "args" "attrib") 8706 . 8743) . 
+              ((symbol "__MATHDECL_1" 8748 . 8760) (semantic-list "(type, function,suffix, args)" 8760 . 8789) (symbol "__attribute__" 8790 . 8803) (semantic-list "(attrib)" 8804 . 8812) (punctuation ";" 8812 . 8813) (symbol "__MATHDECL_1" 8818 . 8830) (semantic-list "(type, __CONCAT(__,function),suffix, args)" 8830 . 8872) (symbol "__attribute__" 8873 . 8886) (semantic-list "(attrib)" 8887 . 8895)))
+          ("M_E" . ((number "2.7182818284590452354" 32740 . 32761)))
+          ("M_LN2" . ((number "0.69314718055994530942" 32895 . 32917)))
+          ("M_LN10l" . ((number "2." 33956 . 33958) (number "302585092994045684017991454684364208L" 33958 . 33995)))
+          ("M_SQRT2l" . ((number "1." 34444 . 34446) (number "414213562373095048801688724209698079L" 34446 . 34483)))
+          ("islessgreater" (spp-arg-list ("x" "y") 42886 . 42892) . ((semantic-list "(__extension__ ({ __typeof__ (x) __x = (x); __typeof__ (y) __y = (y); \\
+		    !isunordered (__x, __y) && __x != __y; }))" 42897 . 43017)))
+          ("HUGE_VALL" . ((symbol "1e10000L" 2190 . 2198)))
+          ("fpclassify" (spp-arg-list ("x") 27041 . 27044) . ((symbol "__MATH_TG" 27045 . 27054) (semantic-list "((x), __fpclassify, (x))" 27055 . 27079)))
+          ("isfinite" (spp-arg-list ("x") 28077 . 28080) . ((symbol "__MATH_TG" 28081 . 28090) (semantic-list "((x), __finite, (x))" 28091 . 28111)))
+          ("M_PIl" . ((number "3." 34027 . 34029) (number "141592653589793238462643383279502884L" 34029 . 34066)))
+          ("M_SQRT1_2l" . ((number "0." 34518 . 34520) (number "707106781186547524400844362104849039L" 34520 . 34557)))
+          ("__MATHDECL_VEC" (spp-arg-list ("type" "function" "suffix" "args") 8205 . 8234) . 
+              ((symbol "__SIMD_DECL" 8239 . 8250) (semantic-list "(__MATH_PRECNAME (function, suffix))" 8251 . 8287) (symbol "__MATHDECL" 8292 . 8302) (semantic-list "(type, function,suffix, args)" 8302 . 8331)))
+          ("MATH_ERRNO" . ((number "1" 29567 . 29568)))
+          ("M_LOG10E" . ((number "0.43429448190325182765" 32841 . 32863)))
+          ("M_PI_2" . ((number "1.57079632679489661923" 33051 . 33073)))
+          ("isunordered" (spp-arg-list ("x" "y") 43116 . 43122) . ((semantic-list "(__extension__ ({ __typeof__ (x) __u = (x); __typeof__ (y) __v = (y); \\
+		    __u != __v && (__u != __u || __v != __v); }))" 43127 . 43250)))
+          ("__SIMD_DECL" (spp-arg-list ("function") 7995 . 8005) . ((symbol "__CONCAT" 8006 . 8014) (semantic-list "(__DECL_SIMD_, function)" 8015 . 8039)))
+          ("signbit" (spp-arg-list ("x") 27854 . 27857) . ((symbol "__MATH_TG" 27858 . 27867) (semantic-list "((x), __signbit, (x))" 27868 . 27889)))
+          ("isnormal" (spp-arg-list ("x") 28320 . 28323) . ((semantic-list "(fpclassify (x) == FP_NORMAL)" 28324 . 28353)))
+          ("MATH_ERREXCEPT" . ((number "2" 29629 . 29630)))
+          ("M_PI" . ((number "3.14159265358979323846" 33002 . 33024)))
+          ("M_SQRT1_2" . ((number "0.70710678118654752440" 33371 . 33393)))
+          ("isgreaterequal" (spp-arg-list ("x" "y") 42431 . 42437) . ((semantic-list "(__extension__ ({ __typeof__ (x) __x = (x); __typeof__ (y) __y = (y); \\
+		    !isunordered (__x, __y) && __x >= __y; }))" 42442 . 42562)))
+          ("MAXFLOAT" . ((number "3.40282347e+38F" 32625 . 32640)))
+          ("M_PI_4" . ((number "0.78539816339744830962" 33102 . 33124)))
+          ("M_1_PI" . ((number "0.31830988618379067154" 33153 . 33175)))
+          ("M_PI_4l" . ((number "0." 34161 . 34163) (number "785398163397448309615660845819875721L" 34163 . 34200)))
+          ("M_1_PIl" . ((number "0." 34229 . 34231) (number "318309886183790671537767526745028724L" 34231 . 34268)))
+          ("isless" (spp-arg-list ("x" "y") 42579 . 42585) . ((semantic-list "(__extension__ ({ __typeof__ (x) __x = (x); __typeof__ (y) __y = (y); \\
+		    !isunordered (__x, __y) && __x < __y; }))" 42590 . 42709)))
+          ("HUGE_VAL" . ((number "1e10000" 1983 . 1990)))
+          ("INFINITY" . ((symbol "HUGE_VALF" 3156 . 3165)))
+          ("FP_ILOGBNAN" . ((number "2147483647" 6336 . 6346)))
+          ("__MATH_DECLARE_LDOUBLE" . ((number "1" 11155 . 11156)))
+          ("M_2_PI" . ((number "0.63661977236758134308" 33204 . 33226)))
+          ("M_El" . ((number "2." 33674 . 33676) (number "718281828459045235360287471352662498L" 33676 . 33713)))
+          ("M_LN2l" . ((number "0." 33885 . 33887) (number "693147180559945309417232121458176568L" 33887 . 33924)))
+          ("FP_NORMAL" . ((number "4" 26096 . 26097)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_ERRNO_H" variable (:constant-flag t) nil [865 873])
+            ("features.h" include (:system-flag t) nil [877 898])
+            ("bits/errno.h" include (:system-flag t) nil [971 994])
+            ("bits/types/error_t.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1559 1590])
+            ("program_invocation_short_name" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [1514 1557])
+            ("program_invocation_name" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [1476 1513])
+            ("errno" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1256 1261])
+            ("__errno_location" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1212 1217]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1182 1246]))          
+      :file "errno.h"
+      :pointmax 1679
+      :fsize 1678
+      :lastmodtime '(23722 22952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_ERRNO_H" . ((number "1" 874 . 875)))
+          ("errno" . ((semantic-list "(*__errno_location ())" 1262 . 1284)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_SETJMP_H" variable (:constant-flag t) nil [876 885])
+            ("features.h" include (:system-flag t) nil [889 910])
+            ("siglongjmp" function
+               (:type "void"
+                :arguments 
+                  ( ("__env" variable (:type ("sigjmp_buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3415 3432])
+                    ("__val" variable (:type "int") (reparse-symbol arg-sub-list) [3433 3443]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3391 3490])
+            ("sigsetjmp" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3131 3140])
+            ("sigjmp_buf" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("__jmp_buf_tag" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [2966 3009])
+            ("_longjmp" function
+               (:type "void"
+                :arguments 
+                  ( ("__env" variable
+                       (:dereference 1
+                        :type ("__jmp_buf_tag" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2692 2722])
+                    ("__val" variable (:type "int") (reparse-symbol arg-sub-list) [2723 2733]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2670 2780])
+            ("longjmp" function
+               (:type "void"
+                :arguments 
+                  ( ("__env" variable
+                       (:dereference 1
+                        :type ("__jmp_buf_tag" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2323 2353])
+                    ("__val" variable (:type "int") (reparse-symbol arg-sub-list) [2354 2364]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2302 2411])
+            ("setjmp" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2165 2171])
+            ("_setjmp" function
+               (:type "int"
+                :arguments 
+                  ( ("__env" variable
+                       (:dereference 1
+                        :type ("__jmp_buf_tag" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2024 2054]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2004 2065])
+            ("__sigsetjmp" function
+               (:type "int"
+                :arguments 
+                  ( ("__env" variable
+                       (:dereference 1
+                        :type ("__jmp_buf_tag" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1859 1889])
+                    ("__savemask" variable (:type "int") (reparse-symbol arg-sub-list) [1890 1905]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1835 1916])
+            ("setjmp" function
+               (:type "int"
+                :arguments 
+                  ( ("__env" variable (:type ("jmp_buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1651 1665]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1632 1676])
+            ("jmp_buf" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("__jmp_buf_tag" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1503 1543])
+            ("__jmp_buf_tag" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("__jmpbuf" variable (:type ("__jmp_buf" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1336 1355])
+                    ("__mask_was_saved" variable (:type "int") (reparse-symbol classsubparts) [1389 1410])
+                    ("__saved_mask" variable (:type ("__sigset_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1445 1469]))                  )
+                (reparse-symbol extern-c-contents) [1076 1500])
+            ("bits/types/__sigset_t.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [977 1011])
+            ("bits/setjmp.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [927 951]))          
+      :file "setjmp.h"
+      :pointmax 3670
+      :fsize 3669
+      :lastmodtime '(23722 22952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("setjmp" (spp-arg-list ("env") 2171 . 2176) . ((symbol "_setjmp" 2177 . 2184) (semantic-list "(env)" 2185 . 2190)))
+          ("_SETJMP_H" . ((number "1" 886 . 887)))
+          ("sigsetjmp" (spp-arg-list ("env" "savemask") 3140 . 3155) . ((symbol "__sigsetjmp" 3156 . 3167) (semantic-list "(env, savemask)" 3168 . 3183)))
+          )
 ))
   :file "!usr!include!semantic.cache"
   :semantic-tag-version "2.0"

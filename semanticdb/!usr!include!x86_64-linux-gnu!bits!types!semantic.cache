@@ -650,6 +650,23 @@
       :lexical-table 
         '(("__struct_tm_defined" . ((number "1" 57 . 58)))
           )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__error_t_defined" variable (:constant-flag t) nil [844 861])
+            ("error_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [865 885]))          
+      :file "error_t.h"
+      :pointmax 894
+      :fsize 893
+      :lastmodtime '(23722 22952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__error_t_defined" . ((number "1" 862 . 863)))
+          )
 ))
   :file "!usr!include!x86_64-linux-gnu!bits!types!semantic.cache"
   :semantic-tag-version "2.0"

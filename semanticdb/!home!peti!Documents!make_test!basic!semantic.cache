@@ -1,0 +1,19 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("all" function (:arguments ("info")) nil [1 11])
+            (".PHONY" function (:arguments ("all")) nil [11 24])
+            ("info" function nil nil [25 64]))          
+      :file "Makefile"
+      :pointmax 64
+      :fsize 63
+      :lastmodtime '(23867 18862 236588 672000)
+      :unmatched-syntax nil))
+  :file "!home!peti!Documents!make_test!basic!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
