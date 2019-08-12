@@ -21,7 +21,8 @@
      ("melpa-stable" . "http://stable.melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (sr-speedbar exec-path-from-shell company-go helm-go-package helm-gtags ggtags go-mode kaolin-themes nyan-mode autopair company))))
+    (go-dlv magit markdown-mode sr-speedbar exec-path-from-shell company-go helm-go-package helm-gtags ggtags go-mode kaolin-themes nyan-mode autopair company)))
+ '(speedbar-show-unknown-files t))
 
 (package-initialize)
 
@@ -43,6 +44,7 @@
                helm-gtags           ;; helm-gtags mode
                exec-path-from-shell ;; package for godoc
                sr-speedbar          ;;
+               markdown-mode        ;;
 	       )))
 
 ;; Rewrite selected text
@@ -58,10 +60,20 @@
 ;; [ => []
 (autopair-global-mode)
 
+;; Global display line number
+(global-display-line-numbers-mode)
+
 ;; Speedbar
 ;; Display all files
 (custom-set-variables
- '(speedbar-show-unknown-files t))
+ '(speedbar-show-unknown-files t)
+ )
+(global-set-key (kbd "<f1>")
+                'speedbar)
+
+;; Bind F10 to set on/off tool-bar-mode
+(global-set-key (kbd "<f10>")
+                'tool-bar-mode)
 
 ;; Set fill-column
 (setq-default fill-column 80)
@@ -243,6 +255,9 @@
 (let ((govet (flycheck-checker-get 'go-vet 'command)))
   (when (equal (cadr govet) "tool")
     (setf (cdr govet) (cddr govet))))
+
+;; GDB Many windows set 1
+(setq gdb-many-windows 1)
 
 ;; Insert licenses
 (defconst mezeipetister-license-gpl2
