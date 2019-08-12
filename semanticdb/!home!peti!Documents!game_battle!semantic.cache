@@ -6,16 +6,6 @@
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
-        '( ("assert.h" include (:system-flag t) nil [1 20])
-            ("main" function (:type "int") nil [22 39]))          
-      :file "test_a.c"
-      :pointmax 40
-      :fsize 39
-      :lastmodtime '(23869 45728 483379 936000)
-      :unmatched-syntax '((semantic-list 99 . 121) (semantic-list 96 . 98) (semantic-list 61 . 83) (semantic-list 58 . 60)))
-    (semanticdb-table "semanticdb-table"
-      :major-mode c-mode
-      :tags 
         '( ("stdlib.h" include (:system-flag t) nil [90 109])
             ("stdio.h" include (:system-flag t) nil [110 128])
             ("string.h" include (:system-flag t) nil [129 148])
@@ -48,69 +38,43 @@
                   ( ("time" variable (:type "int") (reparse-symbol arg-sub-list) [547 556]))                  
                 :type "void")
                 nil [527 636])
-            ("get_random" function (:type "int") nil [659 713])
+            ("SayHello" function (:type "void") nil [638 679])
+            ("get_random" function (:type "int") nil [702 756])
             ("set_new_position" function
                (:arguments 
                   ( ("character" variable
                        (:pointer 1
                         :type ("Character" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [773 794]))                  
+                        (reparse-symbol arg-sub-list) [816 837]))                  
                 :type "void")
-                nil [751 1107])
+                nil [794 1150])
             ("print_players" function
                (:arguments 
                   ( ("player_a" variable
                        (:pointer 1
                         :type ("Character" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [1146 1166])
+                        (reparse-symbol arg-sub-list) [1189 1209])
                     ("player_b" variable
                        (:pointer 1
                         :type ("Character" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [1167 1187]))                  
+                        (reparse-symbol arg-sub-list) [1210 1230]))                  
                 :type "void")
-                nil [1127 1402])
+                nil [1170 1445])
             ("print_position" function
                (:arguments 
-                  ( ("position" variable (:type "int") (reparse-symbol arg-sub-list) [1449 1462])
+                  ( ("position" variable (:type "int") (reparse-symbol arg-sub-list) [1492 1505])
                     ("player" variable
                        (:pointer 1
                         :type ("Character" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [1463 1481]))                  
+                        (reparse-symbol arg-sub-list) [1506 1524]))                  
                 :type "void")
-                nil [1429 1600])
-            ("main" function (:type "int") nil [1602 3051]))          
+                nil [1472 1643])
+            ("main" function (:type "int") nil [1645 3095]))          
       :file "game.c"
-      :pointmax 3052
-      :fsize 3060
-      :lastmodtime '(23863 2257 73008 260000)
-      :unmatched-syntax nil
-      :lexical-table 
-        '(("MAX_ROW" . ((number "10" 345 . 347)))
-          ("CLEAR_EOL" . ((string "\"\\x1B[K\"" 281 . 289)))
-          ("CLEAR_SCREEN" . ((string "\"\\e[1;1H\\e[2J\"" 245 . 259)))
-          ("MAX_COLUMN" . ((number "10" 367 . 369)))
-          ("MOVE_CURSOR" . ((string "\"\\x1B[%d;%df\"" 311 . 324)))
-          )
-)
-    (semanticdb-table "semanticdb-table"
-      :major-mode makefile-gmake-mode
-      :tags nil
-      :file "Makefile"
-      :pointmax 554
-      :fsize 553
-      :lastmodtime '(23869 29703 29988 334000)
-      :unmatched-syntax nil)
-    (semanticdb-table "semanticdb-table"
-      :major-mode c-mode
-      :tags 
-        '( ("assert.h" include (:system-flag t) nil [1 20])
-            ("main" function (:type "int") nil [22 54]))          
-      :file "test_c.c"
-      :pointmax 55
-      :fsize 54
-      :lastmodtime '(23867 57820 588907 968000)
-      :unmatched-syntax nil)
-)
+      :pointmax 3096
+      :fsize 3104
+      :lastmodtime '(23888 29150 266742 209000)
+      :unmatched-syntax nil))
   :file "!home!peti!Documents!game_battle!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

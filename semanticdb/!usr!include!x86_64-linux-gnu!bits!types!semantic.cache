@@ -617,56 +617,6 @@
         '(("____sigset_t_defined")
           ("_SIGSET_NWORDS" . ((semantic-list "(1024 / (8 * sizeof (unsigned long int)))" 83 . 124)))
           )
-)
-    (semanticdb-table "semanticdb-table"
-      :major-mode c-mode
-      :tags 
-        '( ("__struct_tm_defined" variable (:constant-flag t) nil [37 56])
-            ("bits/types.h" include (:system-flag t) nil [60 83])
-            ("tm" type
-               (:members 
-                  ( ("tm_sec" variable (:type "int") (reparse-symbol classsubparts) [142 153])
-                    ("tm_min" variable (:type "int") (reparse-symbol classsubparts) [196 207])
-                    ("tm_hour" variable (:type "int") (reparse-symbol classsubparts) [234 246])
-                    ("tm_mday" variable (:type "int") (reparse-symbol classsubparts) [271 283])
-                    ("tm_mon" variable (:type "int") (reparse-symbol classsubparts) [307 318])
-                    ("tm_year" variable (:type "int") (reparse-symbol classsubparts) [343 355])
-                    ("tm_wday" variable (:type "int") (reparse-symbol classsubparts) [380 392])
-                    ("tm_yday" variable (:type "int") (reparse-symbol classsubparts) [422 434])
-                    ("tm_isdst" variable (:type "int") (reparse-symbol classsubparts) [466 479])
-                    ("tm_gmtoff" variable (:type "long int") (reparse-symbol classsubparts) [524 543])
-                    ("tm_zone" variable
-                       (:pointer 1
-                        :constant-flag t
-                        :type "char")
-                        (reparse-symbol classsubparts) [575 595]))                  
-                :type "struct")
-                nil [128 752]))          
-      :file "struct_tm.h"
-      :pointmax 761
-      :fsize 760
-      :lastmodtime '(23722 22952 0 0)
-      :unmatched-syntax nil
-      :lexical-table 
-        '(("__struct_tm_defined" . ((number "1" 57 . 58)))
-          )
-)
-    (semanticdb-table "semanticdb-table"
-      :major-mode c-mode
-      :tags 
-        '( ("__error_t_defined" variable (:constant-flag t) nil [844 861])
-            ("error_t" type
-               (:typedef ("int")
-                :type "typedef")
-                nil [865 885]))          
-      :file "error_t.h"
-      :pointmax 894
-      :fsize 893
-      :lastmodtime '(23722 22952 0 0)
-      :unmatched-syntax nil
-      :lexical-table 
-        '(("__error_t_defined" . ((number "1" 862 . 863)))
-          )
 ))
   :file "!usr!include!x86_64-linux-gnu!bits!types!semantic.cache"
   :semantic-tag-version "2.0"

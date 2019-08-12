@@ -1,16 +1,0 @@
-;; Emacs-W3 HTTP cookies file
-;; Automatically generated file!!! DO NOT EDIT!!!
-
-(setq url-cookie-storage
- '((".index.hu"
-  [url-cookie "INX_CHECKER2" "1" "10-Feb-2020 14:42:28.00 GMT" "/" ".index.hu" nil]
-  [url-cookie "Max-Age" "604800" "17-Feb-2019 14:42:28.00 GMT" "/" ".index.hu" nil]
-  [url-cookie "mobile_detect" "desktop" "17-Feb-2019 14:42:28.00 GMT" "/" ".index.hu" nil]))
-)
-(setq url-cookie-secure-storage
- 'nil)
-
-;; Local Variables:
-;; version-control: never
-;; no-byte-compile: t
-;; End:

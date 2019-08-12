@@ -145,10 +145,6 @@
           )
 )
     (semanticdb-table "semanticdb-table"
-      :file "ioctl.h"
-      :fsize 1739
-      :lastmodtime '(23722 22952 0 0))
-    (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
         '( ("_SYS_TYPES_H" variable (:constant-flag t) nil [892 904])

@@ -21,7 +21,7 @@
      ("melpa-stable" . "http://stable.melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell company-go helm-go-package helm-gtags ggtags go-mode kaolin-themes nyan-mode autopair company))))
+    (sr-speedbar exec-path-from-shell company-go helm-go-package helm-gtags ggtags go-mode kaolin-themes nyan-mode autopair company))))
 
 (package-initialize)
 
@@ -42,6 +42,7 @@
                helm-go-package			;; heml go package
                helm-gtags						;; helm-gtags mode
                exec-path-from-shell	;; package for godoc
+               sr-speedbar					;;
 	       )))
 
 ;; Rewrite selected text
@@ -161,13 +162,16 @@
             (local-set-key (kbd "M-.") 'godef-jump)
             (local-set-key (kbd "M-*") 'pop-tag-mark)))
 
+;; (add-hook 'go-mode-hook
+;;           (lambda ()
+;;             (set (make-local-variable 'company-backends) '(company-gtags))))
+
 ;; GO MODE settings
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'after-save-hook
           (lambda ()
             (when (derived-mode-p 'go-mode)
               (shell-command-to-string "go install"))))
-
 
 ;; CEDET/Semantic mode enable
 (semantic-mode 1)
@@ -185,7 +189,10 @@
               (ggtags-mode 1))))
 
 ;; (add-hook 'go-mode-hook
-;;           'ggtags-mode)
+;;           (lambda ()
+;;             (when (derived-mode-p 'go-mode)
+;;               (ggtags-mode 1)
+;;               (setq ggtags-executable-directory "~/.emacs.d/bin/gtags"))))
 
 (setq-local imenu-create-index-function
             #'ggtags-build-imenu-index)
