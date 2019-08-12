@@ -244,6 +244,41 @@
   (when (equal (cadr govet) "tool")
     (setf (cdr govet) (cddr govet))))
 
+;; Insert licenses
+(defconst mezeipetister-license-gpl2
+  "Copyright (C) %s %s <%s>.
+All rights reserved. License: GNU GPLv2.0.
+
+Project A: an MVP project about publishing agri tech - mainly machines - information.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.")
+
+(defun license-insert-gpl2 ()
+  "Insert the GPL2 license header."
+  (interactive)
+  (progn
+    (goto-char (point-min))
+    (insert-before-markers-and-inherit (format mezeipetister-license-gpl2
+                    (format-time-string "%Y" (current-time))
+                    "Peter Mezei"
+                    "github.com/mezeipetister"))
+    ;; (fill-region-as-paragraph (point-min)
+    ;;                           (- (point) 1))
+    (comment-region (point-min) (point))
+    (insert "\n")
+    (goto-char (point-min))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
