@@ -1,9 +1,9 @@
 ;;; init.el --- This is my personel emacs conifg
 
 ;;; Commentary:
-;;		@author: 		Peter Mezei
-;;		@license:		MIT
-;;		@help:			github.com/mezeipetister
+;;    @author:    Peter Mezei
+;;    @license:   MIT
+;;    @help:      github.com/mezeipetister
 ;;; code:
 (require 'package)
 
@@ -72,8 +72,8 @@
 (set-default-coding-systems 'utf-8)
 
 ;; Line move UP/DOWN
-;; Ctrl + Shift + UP   => move line UP
-;; Ctrl + Shift + DOWN => move line DOWN
+;; Ctrl + Shift + UP    => move line UP
+;; Ctrl + Shift + DOWN  => move line DOWN
 (defun move-line-up ()
   "Move up the current line."
   (interactive)
@@ -88,7 +88,7 @@
   (forward-line -1)
   (indent-according-to-mode))
 (global-set-key [(control shift down)]  'move-line-down)
-(global-set-key [(control shift up)]  'move-line-up)
+(global-set-key [(control shift up)]    'move-line-up)
 
 ;; Set THEME
 ;; and window LOOK
@@ -97,8 +97,8 @@
 (set-frame-font "Inconsolata-12")
 (set-face-foreground 'font-lock-doc-face "grey")
 (set-face-foreground 'font-lock-comment-face "grey")
-(xterm-mouse-mode 1) ;; Enable mouse in terminal
-(tool-bar-mode -1) ;; Disable toolbar by default
+(xterm-mouse-mode 1)    ;; Enable mouse in terminal
+(tool-bar-mode -1)      ;; Disable toolbar by default
 
 ;; TAB settings
 ;; Set tab
@@ -107,7 +107,7 @@
 (defun my-tab ()
   "Insert a tab char. (ASCII 9, \t)."
   (interactive)
-  (insert "\t")) ;; insert two spaces
+  (insert "\t"))        ;; insert two spaces
 (global-set-key [C-return] 'tab-to-tab-stop)
 (setq-default tab-width 2)
 (setq tab-width 2)
