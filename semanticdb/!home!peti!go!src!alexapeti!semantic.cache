@@ -1,0 +1,27 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("GOCMD" variable (:default-value ("go")) nil [16 27])
+            ("GOBUILD" variable (:default-value ("$(GOCMD)" "build")) nil [27 52])
+            ("GOCLEAN" variable (:default-value ("$(GOCMD)" "clean")) nil [52 77])
+            ("GOTEST" variable (:default-value ("$(GOCMD)" "test")) nil [77 100])
+            ("BINARY_NAME" variable (:default-value ("dralexa_website")) nil [101 132])
+            ("BINARY_WINDOWS" variable (:default-value ("$(BINARY_NAME).exe")) nil [132 168])
+            ("all" function (:arguments ("test" "build")) nil [169 185])
+            ("build" function nil nil [185 225])
+            ("test" function nil nil [226 252])
+            ("clean" function nil nil [253 319])
+            ("run" function nil nil [320 382]))          
+      :file "Makefile"
+      :pointmax 388
+      :fsize 387
+      :lastmodtime '(23885 12222 953146 573000)
+      :unmatched-syntax '((punctuation 387 . 388) (symbol 383 . 387) (bol 383 . 383))))
+  :file "!home!peti!go!src!alexapeti!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

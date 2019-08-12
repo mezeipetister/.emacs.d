@@ -5575,6 +5575,95 @@
           ("htobe64" (spp-arg-list ("x") 3011 . 3014) . ((symbol "__uint64_identity" 3015 . 3032) (semantic-list "(x)" 3033 . 3036)))
           ("be64toh" (spp-arg-list ("x") 3090 . 3093) . ((symbol "__uint64_identity" 3094 . 3111) (semantic-list "(x)" 3112 . 3115)))
           )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_ASSERT_H" variable (:constant-flag t) nil [1006 1015])
+            ("features.h" include (:system-flag t) nil [1018 1039])
+            ("__ASSERT_VOID_CAST" variable (:constant-flag t) nil [1150 1168])
+            ("_ASSERT_H_DECLS" variable (:constant-flag t) nil [1744 1759])
+            ("__assert" function
+               (:type "void"
+                :arguments 
+                  ( ("__assertion" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2332 2356])
+                    ("__file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2357 2376])
+                    ("__line" variable (:type "int") (reparse-symbol arg-sub-list) [2377 2388]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2310 2433])
+            ("__assert_perror_fail" function
+               (:type "void"
+                :arguments 
+                  ( ("__errnum" variable (:type "int") (reparse-symbol arg-sub-list) [2094 2107])
+                    ("__file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2108 2127])
+                    ("__line" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2134 2154])
+                    ("__function" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2155 2178]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2060 2223])
+            ("__assert_fail" function
+               (:type "void"
+                :arguments 
+                  ( ("__assertion" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1863 1887])
+                    ("__file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1888 1907])
+                    ("__line" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1914 1934])
+                    ("__function" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1935 1958]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1836 2003])
+            ("assert" variable (:constant-flag t) nil [2725 2731])
+            ("assert" variable (:constant-flag t) nil [3438 3444])
+            ("assert_perror" variable (:constant-flag t) nil [3707 3720])
+            ("__ASSERT_FUNCTION" variable (:constant-flag t) nil [4448 4465]))          
+      :file "assert.h"
+      :pointmax 4643
+      :fsize 4642
+      :lastmodtime '(23722 22952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__ASSERT_VOID_CAST" . ((semantic-list "(void)" 1169 . 1175)))
+          ("assert_perror" (spp-arg-list ("errnum") 3720 . 3728) . ((semantic-list "(!(errnum)								\\
+   ? __ASSERT_VOID_CAST (0)						\\
+   : __assert_perror_fail ((errnum), __FILE__, __LINE__, __ASSERT_FUNCTION))" 3738 . 3869)))
+          ("_ASSERT_H" . ((number "1" 1016 . 1017)))
+          ("_ASSERT_H_DECLS")
+          ("__ASSERT_FUNCTION" . ((semantic-list "((const char *) 0)" 4466 . 4484)))
+          ("assert" (spp-arg-list ("expr") 3444 . 3450) . ((semantic-list "((void) sizeof ((expr) ? 1 : 0), __extension__ ({			\\
+      if (expr)								\\
+        ; /* empty */							\\
+      else								\\
+        __assert_fail (#expr, __FILE__, __LINE__, __ASSERT_FUNCTION);	\\
+    }))" 3461 . 3669)))
+          )
 ))
   :file "!usr!include!semantic.cache"
   :semantic-tag-version "2.0"

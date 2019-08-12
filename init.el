@@ -29,20 +29,20 @@
 ;; to install before use
 (setq init-packages-to-install
       (quote (use-package
-               nyan-mode						;; most important package
+               nyan-mode            ;; most important package
                autopair
-               company							;; auto completion
-               company-go						;; company-go company mode
-               crux									;; open files by def. sys. app
-               kaolin-themes				;; my custom theme
-               all-the-icons				;; required by kaolin-themes
-               flycheck							;; Flycheck-mode
-               go-mode							;; Go-mode
-               ggtags								;; GGTAGS mode
-               helm-go-package			;; heml go package
-               helm-gtags						;; helm-gtags mode
-               exec-path-from-shell	;; package for godoc
-               sr-speedbar					;;
+               company              ;; auto completion
+               company-go           ;; company-go company mode
+               crux                 ;; open files by def. sys. app
+               kaolin-themes        ;; my custom theme
+               all-the-icons        ;; required by kaolin-themes
+               flycheck             ;; Flycheck-mode
+               go-mode              ;; Go-mode
+               ggtags               ;; GGTAGS mode
+               helm-go-package      ;; heml go package
+               helm-gtags           ;; helm-gtags mode
+               exec-path-from-shell ;; package for godoc
+               sr-speedbar          ;;
 	       )))
 
 ;; Rewrite selected text
@@ -57,6 +57,11 @@
 ;; { => {}
 ;; [ => []
 (autopair-global-mode)
+
+;; Speedbar
+;; Display all files
+(custom-set-variables
+ '(speedbar-show-unknown-files t))
 
 ;; Set fill-column
 (setq-default fill-column 80)
@@ -102,8 +107,8 @@
 (defun my-tab ()
   "Insert a tab char. (ASCII 9, \t)."
   (interactive)
-  (insert "\t"))
-(global-set-key [C-return] 'my-tab)
+  (insert "\t")) ;; insert two spaces
+(global-set-key [C-return] 'tab-to-tab-stop)
 (setq-default tab-width 2)
 (setq tab-width 2)
 

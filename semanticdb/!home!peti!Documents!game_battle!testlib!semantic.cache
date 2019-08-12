@@ -1,0 +1,96 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("string.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("assert.h" include (:system-flag t) nil [40 59])
+            ("stdlib.h" include (:system-flag t) nil [60 79])
+            ("COLOR_DEFAULT" variable (:constant-flag t) nil [89 102])
+            ("COLOR_GREEN" variable (:constant-flag t) nil [121 132])
+            ("COLOR_RED" variable (:constant-flag t) nil [155 164])
+            ("TEST_NAME" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [237 263])
+            ("TEST_RESULT" variable
+               (:typemodifiers ("static")
+                :default-value "1"
+                :type "int")
+                nil [332 359])
+            ("Test" type
+               (:typedef ("test" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [361 386])
+            ("test" type
+               (:members 
+                  ( ("function_name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [404 427])
+                    ("result" variable (:type "int") (reparse-symbol classsubparts) [430 442])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("Test" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [445 456]))                  
+                :type "struct")
+                nil [388 459])
+            ("result" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("Test" type (:type "class") nil nil))
+                nil [461 481])
+            ("set_test_name" function
+               (:arguments 
+                  ( ("test_name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [542 561]))                  
+                :type "void")
+                nil [523 596])
+            ("create_new_test" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("Test" type (:type "class") nil nil))
+                nil [598 717])
+            ("get_last_test_ptr" function
+               (:pointer 1
+                :arguments 
+                  ( ("test" variable
+                       (:pointer 1
+                        :type ("Test" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [743 754]))                  
+                :type ("Test" type (:type "class") nil nil))
+                nil [719 1051])
+            ("add_test" function
+               (:arguments 
+                  ( ("function_name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1097 1120])
+                    ("_result" variable (:type "int") (reparse-symbol arg-sub-list) [1121 1133]))                  
+                :type "void")
+                nil [1083 1565])
+            ("print_test_results" function (:type "void") nil [1625 2366]))          
+      :file "testlib.c"
+      :pointmax 2367
+      :fsize 2366
+      :lastmodtime '(23888 63227 568690 318000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("COLOR_DEFAULT" . ((string "\"\\033[0m\"" 103 . 112)))
+          ("COLOR_RED" . ((string "\"\\033[0;31m\"" 167 . 179)))
+          ("COLOR_GREEN" . ((string "\"\\033[0;36m\"" 134 . 146)))
+          )
+))
+  :file "!home!peti!Documents!game_battle!testlib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
