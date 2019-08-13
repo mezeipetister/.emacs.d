@@ -21,7 +21,7 @@
      ("melpa-stable" . "http://stable.melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (go-dlv magit markdown-mode sr-speedbar exec-path-from-shell company-go helm-go-package helm-gtags ggtags go-mode kaolin-themes nyan-mode autopair company)))
+    (build-status travis yaml-mode go-dlv magit markdown-mode sr-speedbar exec-path-from-shell company-go helm-go-package helm-gtags ggtags go-mode kaolin-themes nyan-mode autopair company)))
  '(speedbar-show-unknown-files t))
 
 (package-initialize)
@@ -45,6 +45,9 @@
                exec-path-from-shell ;; package for godoc
                sr-speedbar          ;;
                markdown-mode        ;;
+               yaml-mode            ;;
+               travis               ;; Travis-mode
+               build-status         ;; Show travis-ci build status in minor mode
 	       )))
 
 ;; Rewrite selected text
@@ -65,9 +68,7 @@
 
 ;; Speedbar
 ;; Display all files
-(custom-set-variables
- '(speedbar-show-unknown-files t)
- )
+
 (global-set-key (kbd "<f1>")
                 'speedbar)
 
@@ -258,6 +259,39 @@
 
 ;; GDB Many windows set 1
 (setq gdb-many-windows 1)
+(defun run-development-mode ()
+  "Demo message."
+  (interactive)
+  (message "Running GDB")
+  (gdb "gdb -i=mi ./main")
+  (tool-bar-mode 1))
+
+(defun development-gdb-run ()
+  "Run GDB run."
+  (interactive)
+  (gud-run 1))
+
+(defun development-gdb-continue ()
+  "Run GDB run."
+  (interactive)
+  (gud-cont 1))
+
+
+(defun development-gdb-next ()
+  "GDB next."
+  (interactive)
+  (gud-next 1))
+
+(global-set-key (kbd "<f5>") 'run-development-mode)
+
+(add-hook 'gdb-mode-hook
+          (lambda ()
+            (local-set-key (kbd "<f8>") 'development-gdb-run)
+            (local-set-key (kbd "<f9>") 'development-gdb-continue)
+            (local-set-key [C-f9] 'development-gdb-next)))
+
+;; Travis-CI
+;; Travis-CI TOKEN is set by git config --add build-status.api-token TOKEN
 
 ;; Insert licenses
 (defconst mezeipetister-license-gpl2
