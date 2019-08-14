@@ -1,0 +1,20 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( (".PHONY" function (:arguments ("watch" "test")) nil [15 34])
+            ("main" function nil nil [35 94])
+            ("watch" function nil nil [95 218])
+            ("test" function nil nil [219 264]))          
+      :file "Makefile"
+      :pointmax 264
+      :fsize 263
+      :lastmodtime '(23892 4587 353685 17000)
+      :unmatched-syntax nil))
+  :file "!home!peti!go!src!github.com!mezeipetister!project_a!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

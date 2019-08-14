@@ -1,0 +1,40 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags 
+        '( ("{{.Title}}" section nil nil [39 293])
+            ("{{template \"navbar\"}}
+    WOHOO
+    {{template \"footer\"}}
+    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\">" section nil nil [293 366])
+            ("" section nil nil [366 551])
+            ("" section nil nil [551 761])
+            ("" section nil nil [761 990]))          
+      :file "base.html"
+      :pointmax 990
+      :fsize 989
+      :lastmodtime '(23891 58211 750658 525000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags nil
+      :file "footer.html"
+      :pointmax 400
+      :fsize 404
+      :lastmodtime '(23892 6974 116516 750000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags nil
+      :file "navbar.html"
+      :pointmax 1639
+      :fsize 1638
+      :lastmodtime '(23892 6124 964442 63000)
+      :unmatched-syntax nil))
+  :file "!home!peti!go!src!github.com!mezeipetister!project_a!templates!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

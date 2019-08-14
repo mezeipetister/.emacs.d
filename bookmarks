@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("github_password"
+(("project_a"
+ (filename . "~/go/src/github.com/mezeipetister/project_a/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . " aug   14 12:35 ")
+ (position . 248))
+("github_password"
  (filename . "~/Documents/github_password")
  (front-context-string . "af6dbdb7dbe8f352")
  (rear-context-string)
@@ -12,9 +17,4 @@
  (front-context-string . ";;; init.el --- ")
  (rear-context-string)
  (position . 1))
-("project_a"
- (filename . "~/go/src/project_a/")
- (front-context-string . ".git\n  -rw-r--r-")
- (rear-context-string . " aug   12 08:10 ")
- (position . 223))
 )

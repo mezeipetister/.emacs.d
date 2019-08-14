@@ -6,13 +6,14 @@
     (semanticdb-table "semanticdb-table"
       :major-mode makefile-gmake-mode
       :tags 
-        '( (".PHONY" function (:arguments ("debug")) nil [16 30])
-            ("debug" function nil nil [31 65]))          
+        '( (".PHONY" function (:arguments ("test")) nil [16 29])
+            ("main" function nil nil [30 89])
+            ("test" function nil nil [90 135]))          
       :file "Makefile"
-      :pointmax 65
-      :fsize 64
-      :lastmodtime '(23889 33904 296505 356000)
-      :unmatched-syntax '((shell-command 40 . 64) (bol 39 . 39) (shell-command 40 . 64) (bol 39 . 39))))
+      :pointmax 135
+      :fsize 134
+      :lastmodtime '(23891 51672 355329 518000)
+      :unmatched-syntax nil))
   :file "!home!peti!go!src!project_a!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

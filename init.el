@@ -21,7 +21,7 @@
      ("melpa-stable" . "http://stable.melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (build-status travis yaml-mode go-dlv magit markdown-mode sr-speedbar exec-path-from-shell company-go helm-go-package helm-gtags ggtags go-mode kaolin-themes nyan-mode autopair company)))
+    (emmet-mode build-status travis yaml-mode go-dlv magit markdown-mode sr-speedbar exec-path-from-shell company-go helm-go-package helm-gtags ggtags go-mode kaolin-themes nyan-mode autopair company)))
  '(speedbar-show-unknown-files t))
 
 (package-initialize)
@@ -48,7 +48,11 @@
                yaml-mode            ;;
                travis               ;; Travis-mode
                build-status         ;; Show travis-ci build status in minor mode
+               emmet-mode           ;; Emmet mode for html development
 	       )))
+
+;; Turn off backup files
+(setq create-lockfiles nil)
 
 ;; Rewrite selected text
 ;; Without this mode, the selected
@@ -262,6 +266,7 @@
 (defun run-development-mode ()
   "Demo message."
   (interactive)
+;;(compile "make build")
   (message "Running GDB")
   (gdb "gdb -i=mi ./main")
   (tool-bar-mode 1))
@@ -284,11 +289,9 @@
 
 (global-set-key (kbd "<f5>") 'run-development-mode)
 
-(add-hook 'gdb-mode-hook
-          (lambda ()
-            (local-set-key (kbd "<f8>") 'development-gdb-run)
-            (local-set-key (kbd "<f9>") 'development-gdb-continue)
-            (local-set-key [C-f9] 'development-gdb-next)))
+(global-set-key (kbd "<f8>") 'development-gdb-run)
+(global-set-key (kbd "<f9>") 'development-gdb-continue)
+(global-set-key [C-f9] 'development-gdb-next)
 
 ;; Travis-CI
 ;; Travis-CI TOKEN is set by git config --add build-status.api-token TOKEN
